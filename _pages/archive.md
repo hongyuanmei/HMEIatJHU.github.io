@@ -1,10 +1,19 @@
+---
+layout: page
+title: archive
+permalink: /archive/
+#description: A growing collection of your cool projects.
+nav: true
+#display_categories: [work, fun]
+#horizontal: false
+---
+
 <div class="news">
-  <h2>news <span style="font-size: 60%; background: inherit;">[<a href="/archive/">archive</a>]</span></h2>
   {% if site.news  %}
     <div class="table-responsive">
       <table class="table table-sm table-borderless">
       {% assign news = site.news | reverse %}
-      {% for item in news limit: site.news_limit %}
+      {% for item in news %}
         <tr>
           <th scope="row">{{ item.date | date: "%b %-d, %Y" }}</th>
           <td>

@@ -3,70 +3,155 @@
 
 @string{aps = {American Physical Society,}}
 
-@book{einstein1956investigations,
+@article{hua2020personalized,
+  abbr = {BA},
+  bibtex_show = {true},
+  title = {Personalized Dynamic Treatment Regimes in Continuous Time: A {B}ayesian Joint Model for Optimizing Clinical Decisions with Timing},
+  author = {Hua, William and Mei, Hongyuan and Zohar, Sarah and Giral, Magali and Xu, Yanxun},
+  journal={Bayesian Analysis},
+  year={2021}, 
+  arxiv={2007.04155}, 
+  code = {https://github.com/YanxunXu/doct}, 
+  abstract = {
+    Accurate models of clinical actions and their impacts on disease progression are critical for estimating personalized optimal dynamic treatment regimes (DTRs) in medical/health research, especially in managing chronic conditions. Traditional statistical methods for DTRs usually focus on estimating the optimal treatment or dosage at each given medical intervention, but overlook the important question of "when this intervention should happen." We fill this gap by developing a two-step Bayesian approach to optimize clinical decisions with timing. In the first step, we build a generative model for a sequence of medical interventions-which are discrete events in continuous time-with a marked temporal point process (MTPP) where the mark is the assigned treatment or dosage. Then this clinical action model is embedded into a Bayesian joint framework where the other components model clinical observations including longitudinal medical measurements and time-to-event data conditional on treatment histories. In the second step, we propose a policy gradient method to learn the personalized optimal clinical decision that maximizes the patient survival by interacting the MTPP with the model on clinical observations while accounting for uncertainties in clinical observations learned from the posterior inference of the Bayesian joint model in the first step. A signature application of the proposed approach is to schedule follow-up visitations and assign a dosage at each visitation for patients after kidney transplantation. We evaluate our approach with comparison to alternative methods on both simulated and real-world datasets. In our experiments, the personalized decisions made by the proposed method are clinically useful: they are interpretable and successfully help improve patient survival.
+  }
+}
+
+@inproceedings{mei2020nce,
+  abbr = {NeurIPS},
   bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation,}
+  author =      {Hongyuan Mei and Tom Wan and Jason Eisner},
+  title =       {Noise-Contrastive Estimation for Multivariate Point Processes},
+  booktitle =   {NeurIPS},
+  year =        {2020}, 
+  arxiv = {2011.00717}, 
+  code = {https://github.com/HMEIatJHU/nce-mpp}, 
+  talk = {https://youtu.be/2GkZfl9NtO0}, 
+  abstract={
+    The log-likelihood of a generative model often involves both positive and negative terms. For a temporal multivariate point process, the negative term sums over all the possible event types at each time and also integrates over all the possible times. As a result, maximum likelihood estimation is expensive. We show how to instead apply a version of noise-contrastive estimation---a general parameter estimation method with a less expensive stochastic objective. Our specific instantiation of this general idea works out in an interestingly non-trivial way and has provable guarantees for its optimality, consistency and efficiency. On several synthetic and real-world datasets, our method shows benefits: for the model to achieve the same level of log-likelihood on held-out data, our method needs considerably fewer function evaluations and less wall-clock time.
+  }
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
+@inproceedings{mei2020datalog,
+  abbr = {ICML},
   bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics,},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers,}
+  author =      {Hongyuan Mei and Guanghui Qin and Minjie Xu and Jason Eisner},
+  title =       {Neural {D}atalog Through Time: {I}nformed Temporal Modeling via Logical Specification},
+  booktitle =   {ICML},
+  year =        {2020},
+  arxiv = {2006.16723}, 
+  code = {https://github.com/HMEIatJHU/neural-datalog-through-time}, 
+  talk = {https://youtu.be/mp79uOO5ZuA}, 
+  abstract={
+    Learning how to predict future events from patterns of past events is difficult when the set of possible event types is large. Training an unrestricted neural model might overfit to spurious patterns. To exploit domain-specific knowledge of how past events might affect an event's present probability, we propose using a temporal deductive database to track structured facts over time. Rules serve to prove facts from other facts and from past events. Each fact has a time-varying state---a vector computed by a neural net whose topology is determined by the fact's provenance, including its experience of past events. The possible event types at any time are given by special facts, whose probabilities are neurally modeled alongside their states. In both synthetic and real-world domains, we show that neural probabilistic models derived from concise Datalog programs improve prediction by encoding appropriate domain knowledge in their architecture.
+  }
 }
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein, A. and Podolsky, B. and Rosen, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.,},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  selected={true}
+@inproceedings{mei2019smoothing,
+  abbr = {ICML},
+  bibtex_show={true},
+  author =      {Hongyuan Mei and Guanghui Qin and Jason Eisner},
+  title =       {Imputing Missing Events in Continuous-Time Event Streams},
+  booktitle =   {ICML},
+  year =        {2019},
+  arxiv = {1905.05570}, 
+  code = {https://github.com/HMEIatJHU/neural-hawkes-particle-smoothing}, 
+  abstract={
+    Events in the world may be caused by other, unobserved events. We consider sequences of events in continuous time. Given a probability model of complete sequences, we propose particle smoothing---a form of sequential importance sampling---to impute the missing events in an incomplete sequence. We develop a trainable family of proposal distributions based on a type of bidirectional continuous-time LSTM: Bidirectionality lets the proposals condition on future observations, not just on the past as in particle filtering. Our method can sample an ensemble of possible complete sequences (particles), from which we form a single consensus prediction that has low Bayes risk under our chosen loss metric. We experiment in multiple synthetic and real domains, using different missingness mechanisms, and modeling the complete sequences in each domain with a neural Hawkes process (Mei & Eisner 2017). On held-out incomplete sequences, our method is effective at inferring the ground-truth unobserved events, with particle smoothing consistently improving upon particle filtering.
+  }
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik,},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
+@inproceedings{mei2017neuralhawkes,
+  abbr = {NeurIPS},
+  bibtex_show = {true},
+  author =      {Hongyuan Mei and Jason Eisner},
+  title =       {The Neural {H}awkes Process: {A} Neurally Self-Modulating Multivariate Point Process},
+  booktitle =   {NeurIPS},
+  year =        {2017},
+  arxiv = {1612.09328}, 
+  code = {https://github.com/HMEIatJHU/neurawkes}, 
+  talk = {https://youtu.be/G7JfYnSlKUM}, 
+  abstract={
+    Many events occur in the world. Some event types are stochastically excited or inhibited---in the sense of having their probabilities elevated or decreased---by patterns in the sequence of previous events. Discovering such patterns can help us predict which type of event will happen next and when. We model streams of discrete events in continuous time, by constructing a neurally self-modulating multivariate point process in which the intensities of multiple event types evolve according to a novel continuous-time LSTM. This generative model allows past events to influence the future in complex and realistic ways, by conditioning future event intensities on the hidden state of a recurrent neural network that has consumed the stream of past events. Our model has desirable qualitative properties. It achieves competitive likelihood and predictive accuracy on real and synthetic datasets, including under missing-data conditions.
+  }
 }
 
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.,},
-  volume={17},
-  pages={549--560},
-  year={1905}
+@inproceedings{mei2019classifier,
+  abbr = {NAACL},
+  bibtex_show = {true},
+  author =      {Shijia Liu and Hongyuan Mei and Adina Williams and Ryan Cotterell},
+  title =       {On the Idiosyncrasies of the {M}andarin {C}hinese Classifier System},
+  booktitle = {NAACL},
+  year =        {2019},
+  arxiv = {1902.10193}, 
+  abstract={
+    While idiosyncrasies of the Chinese classifier system have been a richly studied topic among linguists (Adams and Conklin, 1973; Erbaugh, 1986; Lakoff, 1986), not much work has been done to quantify them with statistical methods. In this paper, we introduce an information-theoretic approach to measuring idiosyncrasy; we examine how much the uncertainty in Mandarin Chinese classifiers can be reduced by knowing semantic information about the nouns that the classifiers modify. Using the empirical distribution of classifiers from the parsed Chinese Gigaword corpus (Graff et al., 2005), we compute the mutual information (in bits) between the distribution over classifiers and distributions over other linguistic quantities. We investigate whether semantic classes of nouns and adjectives differ in how much they reduce uncertainty in classifier choice, and find that it is not fully idiosyncratic; while there are no obvious trends for the majority of semantic classes, shape nouns reduce uncertainty in classifier choice the most.
+  }
 }
 
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
+@inproceedings{mei2018halo,
+  abbr = {*SEM},
+  bibtex_show = {true},
+  author =      {Hongyuan Mei* and Sheng Zhang* and Kevin Duh and Benjamin Van Durme},
+  title =       {Halo: Learning Semantics-Aware Representations for Cross-Lingual Information Extraction},
+  booktitle =   {Joint Conference on Lexical and Computational Semantics},
+  year =        {2018},
+  arxiv = {1805.08271}, 
+  abstract={
+    Cross-lingual information extraction (CLIE) is an important and challenging task, especially in low resource scenarios. To tackle this challenge, we propose a training method, called Halo, which enforces the local region of each hidden state of a neural model to only generate target tokens with the same semantic structure tag. This simple but powerful technique enables a neural model to learn semantics-aware representations that are robust to noise, without introducing any extra parameter, thus yielding better generalization in both high and low resource settings.
+  }
+}
+
+@inproceedings{mei2017coherent,
+  abbr = {AAAI},
+  bibtex_show = {true},
+  title     = {Coherent Dialogue with Attention-based Language Models},
+  author    = {Hongyuan Mei and Mohit Bansal and Matthew R. Walter},
+  booktitle = {AAAI},
+  year      = {2017}, 
+  arxiv = {1611.06997}, 
+  abstract = {
+    We model coherent conversation continuation via RNN-based dialogue models equipped with a dynamic attention mechanism. Our attention-RNN language model dynamically increases the scope of attention on the history as the conversation continues, as opposed to standard attention (or alignment) models with a fixed input scope in a sequence-to-sequence model. This allows each generated word to be associated with the most relevant words in its corresponding conversation history. We evaluate the model on two popular dialogue datasets, the open-domain MovieTriples dataset and the closed-domain Ubuntu Troubleshoot dataset, and achieve significant improvements over the state-of-the-art and baselines on several metrics, including complementary diversity-based metrics, human evaluation, and qualitative visualizations. We also show that a vanilla RNN with dynamic attention outperforms more complex memory models (e.g., LSTM and GRU) by allowing for flexible, long-distance memory. We promote further coherence via topic modeling-based reranking.
+  }
+}
+
+@inproceedings{mei2016selective,
+  abbr = {NAACL},
+  bibtex_show = {true},
+  title     = {What to talk about and how? Selective Generation using LSTMs with Coarse-to-Fine Alignment},
+  author    = {Hongyuan Mei and Mohit Bansal and Matthew R. Walter},
+  booktitle = {NAACL},
+  year      = {2016}, 
+  arxiv = {1509.00838}, 
+  code = {https://github.com/HMEIatJHU/SelectiveGeneration}, 
+  abstract = {
+    We propose an end-to-end, domain-independent neural encoder-aligner-decoder model for selective generation, i.e., the joint task of content selection and surface realization. Our model first encodes a full set of over-determined database event records via an LSTM-based recurrent neural network, then utilizes a novel coarse-to-fine aligner to identify the small subset of salient records to talk about, and finally employs a decoder to generate free-form descriptions of the aligned, selected records. Our model achieves the best selection and generation results reported to-date (with 59% relative improvement in generation) on the benchmark WeatherGov dataset, despite using no specialized features or linguistic resources. Using an improved k-nearest neighbor beam filter helps further. We also perform a series of ablations and visualizations to elucidate the contributions of our key model components. Lastly, we evaluate the generalizability of our model on the RoboCup dataset, and get results that are competitive with or better than the state-of-the-art, despite being severely data-starved.
+  }
+}
+
+@inproceedings{mei2016navigational,
+  abbr = {AAAI},
+  bibtex_show = {true},
+  title     = {Listen, Attend, and Walk: Neural Mapping of Navigational Instructions to Action Sequences},
+  author    = {Hongyuan Mei and Mohit Bansal and Matthew R. Walter},
+  booktitle = {AAAI},
+  year      = {2016}, 
+  arxiv = {1506.04089}, 
+  code = {https://github.com/HMEIatJHU/NeuralWalker}, 
+  abstract = {
+    We propose a neural sequence-to-sequence model for direction following, a task that is essential to realizing effective autonomous agents. Our alignment-based encoder-decoder model with long short-term memory recurrent neural networks (LSTM-RNN) translates natural language instructions to action sequences based upon a representation of the observable world state. We introduce a multi-level aligner that empowers our model to focus on sentence "regions" salient to the current world state by using multiple abstractions of the input sentence. In contrast to existing methods, our model uses no specialized linguistic resources (e.g., parsers) or task-specific annotations (e.g., seed lexicons). It is therefore generalizable, yet still achieves the best results reported to-date on a benchmark single-sentence dataset and competitive results for the limited-training multi-sentence setting. We analyze our model through a series of ablations that elucidate the contributions of the primary components of our model.
+  }
+}
+
+@article{chu2015satellite,
+  abbr = {NeurIPS},
+  bibtex_show = {true},
+  title={Accurate Vision-based Vehicle Localization using Satellite Imagery},
+  author={Hang Chu and Hongyuan Mei and Mohit Bansal and Matthew R. Walter},
+  journal={arXiv preprint arXiv: 1510.09171},
+  year={2015}, 
+  arxiv = {1510.09171}, 
+  abstract = {
+    We propose a method for accurately localizing ground vehicles with the aid of satellite imagery. Our approach takes a ground image as input, and outputs the location from which it was taken on a georeferenced satellite image. We perform visual localization by estimating the co-occurrence probabilities between the ground and satellite images based on a ground-satellite feature dictionary. The method is able to estimate likelihoods over arbitrary locations without the need for a dense ground image database. We present a ranking-loss based algorithm that learns location-discriminative feature projection matrices that result in further improvements in accuracy. We evaluate our method on the Malaga and KITTI public datasets and demonstrate significant improvements over a baseline that performs exhaustive search.
+  }
 }

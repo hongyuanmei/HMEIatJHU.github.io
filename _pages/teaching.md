@@ -2,10 +2,28 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+#description: Teaching is understanding. 
 nav: true
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+I believe that *explaining is understanding*. 
 
-Organize your courses by years, topics, or universities, however you like!
+I find it really amusing and inspiring to know about this Feynman story told by David Goldstein: 
+
+> Feynman was a truly great teacher. He prided himself on being able to devise ways to explain even the most profound ideas to beginning students. Once, I said to him, "Dick, explain to me, so that I can understand it, why spin one-half particles obey Fermi-Dirac statistics." Sizing up his audience perfectly, Feynman said, "I'll prepare a freshman lecture on it." But he came back a few days later to say, "I couldn't do it. I couldn't reduce it to the freshman level. That means we don't really understand it."
+
+Here is a list of courses that I have been involved in:
+
+- Course Instructor, Bloomberg ML Course on Modeling Irregular Time Series, Bloomberg, Fall 2020
+    - It is a series of lectures with hands-on experience.
+    - Material: [slides + ipython notebook](https://github.com/HMEIatJHU/tpp-short-course)
+
+- Guest Speaker, [2018 JHU Summer School on Human Language Technology](https://www.clsp.jhu.edu/workshops/18-workshop/2018-jhu-summer-school-on-human-language-technology/), Johns Hopkins University, Summer 2018
+    - This is part of [Fifth Frederick Jelinek Memorial Summer Workshop](https://www.clsp.jhu.edu/workshops/18-workshop/)
+    - I gave a 60-min tutorial on deep learning with MXNet Gluon. Material: [slides]()
+
+- Teaching Assistant, [Natural Language Processing](http://www.cs.jhu.edu/~jason/465/) (Instructor: Jason Eisner), Johns Hopkins University, Fall 2017
+    - I held a series of technical discuss sessions for the course. 
+    - Material: [optimization]()
+
+- Guest Lecturer, [Information Retrieval and Web Agents](http://www.cs.jhu.edu/~yarowsky/cs466.html) (Instructor: David Yarowsky), Johns Hopkins University, Spring 2017
