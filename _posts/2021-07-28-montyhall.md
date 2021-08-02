@@ -3,6 +3,7 @@ layout: post
 title: Monty Hall Problem
 date: 2021-07-28 12:39:00-0400
 description: formal but easy-to-follow probability approach, my first shot of writing a blog post
+comments: true
 ---
 
 The [Monty Hall Problem](https://en.wikipedia.org/wiki/Monty_Hall_problem) is very interesting and covered by tons of online posts. Unfortunately, none of those I have found is precise enough about how the mathematics derivation works out. So I decided to write this blog and approach this simple problem in a (maybe over-)technical way.
