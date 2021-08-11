@@ -16,7 +16,6 @@ My activities include:
     - [NeurIPS-2020](https://nips.cc/Conferences/2020)
     - [EMNLP-2020](https://2020.emnlp.org/) [[Outstanding Reviewer](https://www.aclweb.org/anthology/2020.emnlp-main.0.pdf)]
     - [AACL-IJCNLP-2020](http://aacl2020.org/)
-    - [ICML-2020](https://icml.cc/Conferences/2020/) [[Top 33% Reviewer](https://drive.google.com/file/d/1CUytYXWpeIemh62l72EuTxikv2CFlihs/view?usp=sharing)]
     - [ICML-2020](https://icml.cc/Conferences/2020/) [[Top 33% Reviewer]({{ site.baseurl }}/assets/pdf/Hongyuan_ICML_Certificate.pdf)]
     - [ICLR-2020](https://iclr.cc/Conferences/2020/)
     - [EMNLP-2019](https://www.emnlp-ijcnlp2019.org/)

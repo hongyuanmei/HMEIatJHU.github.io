@@ -14,4 +14,6 @@ When I am away from my workstation, I may be:
 
 * Hiking or skiing 
 
-* Reading (e.g. [Jason Eisner drawn by Hongyuan Mei]())
+* Reading 
+
+* Drawing (e.g. [My PhD advisor Jason Eisner drawn by me in 2017]({{site.baseurl}}/assets/pdf/jason_drawing_by_hongyuan.pdf))

@@ -20,10 +20,10 @@ Here is a list of courses that I have been involved in:
 
 - Guest Speaker, [2018 JHU Summer School on Human Language Technology](https://www.clsp.jhu.edu/workshops/18-workshop/2018-jhu-summer-school-on-human-language-technology/), Johns Hopkins University, Summer 2018
     - This is part of [Fifth Frederick Jelinek Memorial Summer Workshop](https://www.clsp.jhu.edu/workshops/18-workshop/)
-    - I gave a 60-min tutorial on deep learning with MXNet Gluon. Material: [slides]()
+    - I gave a 60-min tutorial on deep learning with MXNet Gluon. Material: [slides]({{site.baseurl}}/assets/pdf/gluon.pdf)
 
 - Teaching Assistant, [Natural Language Processing](http://www.cs.jhu.edu/~jason/465/) (Instructor: Jason Eisner), Johns Hopkins University, Fall 2017
     - I held a series of technical discuss sessions for the course. 
-    - Material: [optimization]()
+    - Material: [optimization]({{site.baseurl}}/assets/pdf/optimization.pdf)
 
 - Guest Lecturer, [Information Retrieval and Web Agents](http://www.cs.jhu.edu/~yarowsky/cs466.html) (Instructor: David Yarowsky), Johns Hopkins University, Spring 2017
