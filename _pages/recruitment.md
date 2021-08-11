@@ -8,13 +8,16 @@ nav: true
 
 Welcome! Thank you for your interest in working with me. 
 
-Below is a list of research projects that I have been or will be doing. 
-If any of them is interesting to you, please send your application to <hongyuan@ttic.edu>. 
+I am generally interested in ***all kinds of machine learning problems*** and I'd be thrilled to work with you if you bring up your own research topics to me. 
+If you'd like to, please send your application to <hongyuan@ttic.edu>. 
 Your application should include
 - your up-to-date CV; 
 - 1~3 contacts for (if needed) reference letters; 
-- the specific project(s) that you'd like to work on, and why you like them; 
-- a short description about your background and how it has prepared you for the project(s). 
+- what you'd like to work on, and why you do; 
+- a short description about your background and how it has prepared you for your research interests. 
+
+Of course, you might be a technically strong student that has genuine interest in research but doesn't know where to start. 
+In that case, I would highly recommend you think about the following projects that I am currently working on. 
 
 #### Event Sequence Modeling
 
