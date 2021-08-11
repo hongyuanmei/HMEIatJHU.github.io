@@ -8,7 +8,7 @@ nav: true
 
 Welcome! Thank you for your interest in working with me. 
 
-I am generally interested in ***all kinds of machine learning problems*** and I'd be thrilled to work with you if you bring up your own research topics to me. 
+I am generally interested in ***all kinds of machine learning problems***, and I'd be thrilled to work with you if you reach out to me with your favorite research topics. 
 If you'd like to, please send your application to <hongyuan@ttic.edu>. 
 Your application should include
 - your up-to-date CV; 
@@ -90,6 +90,6 @@ A large body of research has been done to improve its efficacy and efficiency.
 
 I am generally interested in whether any of the following techniques would help a Transformer model learn and generalize better: 
 - *look-ahead*: how each possible word may (re-)shape the model distribution over future possible words;  
-- *uncertainty quantification*: how certain the model is about its predictions; 
+- *uncertainty quantification*: how uncertain the model is about its predictions; 
 - ... 
 
