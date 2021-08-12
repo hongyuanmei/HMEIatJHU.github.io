@@ -11,7 +11,7 @@ Welcome! Thank you for your interest in working with me.
 I am generally interested in ***all kinds of machine learning problems***, and I'd be thrilled to work with you if you reach out to me with your favorite research topics. 
 If you'd like to, please send your application to <hongyuan@ttic.edu>. 
 Your application should include
-- your up-to-date CV; 
+- your up-to-date CV or resume; 
 - 1~3 contacts for (if needed) reference letters; 
 - what you'd like to work on, and why you do; 
 - a short description about your background and how it has prepared you for your research interests. 
@@ -19,7 +19,8 @@ Your application should include
 Of course, you might be a technically strong student that has genuine interest in research but doesn't know where to start. 
 In that case, I would highly recommend you think about the following projects that I am currently working on. 
 
-#### Event Sequence Modeling
+
+#### ***Event Sequence Modeling***
 
 *Events are everywhere.* They include: 
 - *Medical events.* Each patient has a sequence of doctor’s visits, tests, diagnoses, and medications. 
@@ -49,12 +50,13 @@ Future research directions might be:
 
 Maybe you can even come up with your own research questions in this area? 
 
-#### Event-Based Reinforcement Learning
+
+#### ***Event-Based Reinforcement Learning***
 
 *Predictive models may help decision making.* 
 In an interactive environment, an intelligent agent may act more wisely if it can predict *what* will happen and *when* they'll happen in response to each action that it may take. 
 
-In the medical scenario shown below, an intelligent assistant reads the previous electronic health records, predicts the future condition---in this case, severe illness and a high-risk surgery---of the patient, and suggests right clinical measurements (to gather more information) and treatments (for improvement) at right times, aiming to cure or alleviate the illness and make that high-risk surgery no longer needed. 
+In the medical scenario shown below, an intelligent assistant reads the previous electronic health records, predicts the future condition---in this case, severe illness and a high-risk surgery---of the patient, and suggests the right clinical measurements (to gather more information) and treatments (for improvement) at the right times, aiming to cure or alleviate the illness and make that high-risk surgery no longer needed. 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         <img class="img-fluid rounded z-depth-1" style="max-width: 50%;" src="{{ site.baseurl }}/assets/img/med-rl-example.jpg">
@@ -68,13 +70,13 @@ In the medical scenario shown below, an intelligent assistant reads the previous
 -->
 
 <br>
-Similar intelligent agents can also benefit other application domains like education, social, etc. 
+Similar intelligent agents can also benefit other application domains like education, social media, etc. 
 
 I work on general techniques that can use reinforcement learning (RL) to enable such agents. 
 What motivates novel RL methods is that we have to consider *timings* in those applications: 
 - when reading previous events, the agent needs to take their occurrence times into account; 
 - when predicting future events, the agent needs to predict when they will happen; 
-- when taking actions, the agent needs to know when to do them---e.g., too early or too late clinical treatments may not really help but only be a waste of resources. 
+- when taking actions, the agent needs to know when to do them---e.g., clinical treatments that are provided too early or too late may not help but may instead only be a waste of resources. 
 
 <!---
 Advances in this area would call for: 
@@ -83,7 +85,8 @@ Advances in this area would call for:
 - scarce interactions---we are often not allowed to interact with real users (patients, students, ...). 
 -->
 
-#### Novel Transformer Models
+
+#### ***Novel Transformer Models***
 
 Transformer architectures have shown astonishing performance in a wide range of machine learning tasks such as machine translations, few-shot learning, multi-modal learning, etc. 
 A large body of research has been done to improve its efficacy and efficiency. 
