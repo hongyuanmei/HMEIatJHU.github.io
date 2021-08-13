@@ -15,5 +15,8 @@ His PhD research was supported by Bloomberg Data Science PhD Fellowship, and cov
 He was a member of the Center for Language and Speech Processing (CLSP), and the 2020 recipient for the Jelinek Fellowship. 
 At JHU, he collaborated with Yanxun Xu from Applied Math & Statistics as well as Benjamin Van Durme and Kevin Duh from Computer Science.
 
-Befor joining JHU and CLSP, Hongyuan Mei obtained a MS in Physical Science at The University of Chicago and did research in natural language understanding and generation with Mohit Bansal and Matthew R. Walter at Toyota Technological Institute at Chicago. 
-Prior to that, he obtained a BE in Electrical Engineering from Huazhong University of Science and Technology (HUST).
+Befor joining JHU and CLSP, Hongyuan Mei obtained two MS degrees 
+<!---(in Physical Science and Financial Mathematics)-->
+from The University of Chicago, 
+and did research in natural language understanding and generation with Mohit Bansal and Matthew R. Walter at Toyota Technological Institute at Chicago. 
+Prior to that, he obtained a BE in Electrical Engineering from Huazhong University of Science and Technology.
