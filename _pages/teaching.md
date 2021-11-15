@@ -14,6 +14,9 @@ I find it really amusing and inspiring to know about this Feynman story told by 
 
 Here is a list of courses that I have been involved in:
 
+- Course Instructor, [Convex Optimization](https://www.ttic.edu/courses/#co), UChicago & TTIC, Winter 2022
+    - It is cross-listed as TTIC 31070, CMSC 35470, BUSN 36903, STAT 31015, CAAM 31015. 
+
 - Course Instructor, Bloomberg ML Course on Modeling Irregular Time Series, Bloomberg, Fall 2020
     - It is a series of lectures with hands-on experience.
     - Material: [slides + ipython notebook](https://github.com/HMEIatJHU/tpp-short-course)
