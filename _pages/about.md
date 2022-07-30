@@ -19,7 +19,7 @@ social: false  # includes social icons at the bottom of the page
 
 I am a computer scientist. 
 I am currently working as a Research Assistant Professor at Toyota Technological Institute at Chicago (TTIC). 
-My research interests are rooted in designing machine learning models and algorithms to solve challenging real-world problems.
-My current focus is to enable computers to reason about the real world, which involves time series modeling and natural language understanding. 
+My research goal is to enable computers to reason about the real world. 
+To achieve this goal, I develop machine learning models and algorithms for time series modeling and natural language understanding. 
 
 **I am looking for talented undergrad/Masters/PhD students to work with on interesting research projects. Please read [this post]({{ '/recruitment/' | relative_url }}) for more details.**

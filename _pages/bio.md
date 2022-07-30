@@ -7,8 +7,8 @@ nav: true
 ---
 
 Hongyuan Mei is currently a Research Assistant Professor at Toyota Technological Institute at Chicago (TTIC). 
-His research interests are rooted in designing machine learning models and algorithms to solve challenging real-world problems.
-His current focus is to enable computers to reason about the real world, which involves time series modeling and natural language understanding.
+His research goal is to enable computers to reason about the real world. 
+His current focus is to develop machine learning models and algorithms for time series modeling and natural language understanding. 
 
 Hongyuan Mei obtained his PhD from the Department of Computer Science at Johns Hopkins University (JHU), where he was advised by Jason Eisner. 
 His PhD research was supported by Bloomberg Data Science PhD Fellowship, and covered by [Fortune Magazine](https://fortune.com/2020/09/08/disco-bell-bottoms-big-hair-and-cutting-edge-a-i/) and [Tech At Bloomberg](https://www.techatbloomberg.com/blog/icml-2020-bloomberg-ph-d-fellow-combines-datalog-and-neural-networks-to-model-dynamic-databases/). 
