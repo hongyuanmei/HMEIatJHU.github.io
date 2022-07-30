@@ -8,9 +8,13 @@ nav: true
 
 I regularly serve for the machine learning community. 
 My activities include: 
-- Oranize
+- Organize
     - [ACL-RepL4NLP-2018](https://sites.google.com/site/repl4nlp2018/home)
+- Area Chair for 
+    - [EMNLP-2022](https://2022.emnlp.org/)
 - Review for
+    - [NeurIPS-2022](https://nips.cc/Conferences/2022)
+    - [COLING-2022](https://coling2022.org/)
     - [NeurIPS-2021](https://nips.cc/Conferences/2021)
     - [ICLR-2021](https://iclr.cc/Conferences/2021/) [[Outstanding Reviewer](https://iclr.cc/Conferences/2021/Reviewers)]
     - [NeurIPS-2020](https://nips.cc/Conferences/2020)
