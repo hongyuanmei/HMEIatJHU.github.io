@@ -3,6 +3,19 @@
 
 @string{aps = {American Physical Society,}}
 
+@inproceedings{xue2022hypro,
+  abbr = {NeurIPS},
+  bibtex_show={true},
+  author =      {Siqiao Xue and Xiaoming Shi and James Y Zhang and Hongyuan Mei},
+  title =       {HYPRO: A Hybridly Normalized Probabilistic Model for Long-Horizon Prediction of Event Sequences},
+  booktitle =   {NeurIPS},
+  year =        {2022}, 
+  arxiv = {2210.01753}, 
+  code = {https://github.com/iLampard/hypro_tpp}, 
+  abstract={
+    In this paper, we tackle the important yet under-investigated problem of making long-horizon prediction of event sequences. Existing state-of-the-art models do not perform well at this task due to their autoregressive structure. We propose HYPRO, a hybridly normalized probabilistic model that naturally fits this task: its first part is an autoregressive base model that learns to propose predictions; its second part is an energy function that learns to reweight the proposals such that more realistic predictions end up with higher probabilities. We also propose efficient training and inference algorithms for this model. Experiments on multiple real-world datasets demonstrate that our proposed HYPRO model can significantly outperform previous models at making long-horizon predictions of future events. We also conduct a range of ablation studies to investigate the effectiveness of each component of our proposed methods.
+  }
+}
 
 @article{qu2022bellman,
   abbr = {arXiv}, 
