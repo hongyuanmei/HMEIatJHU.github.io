@@ -3,6 +3,34 @@
 
 @string{aps = {American Physical Society,}}
 
+@inproceedings{zhao2022tiny,
+  abbr = {EMNLP},
+  bibtex_show={true},
+  author =      {Hongyu Zhao and Hao Tan and Hongyuan Mei},
+  title =       {Tiny-Attention Adapter: Contexts Are More Important Than the Number of Parameters},
+  booktitle =   {EMNLP},
+  year =        {2022}, 
+  arxiv = {2211.01979}, 
+  abstract={
+    Adapter-tuning is a paradigm that transfers a pretrained language model to downstream tasks by adding and tuning a small number of new parameters. Previously proposed adapter architectures are all feed-forward neural networks. In this paper, we investigate the effectiveness of using tiny-attention -- i.e., attention with extremely small per-head dimensionality -- as adapters. Our tiny-attention adapter learns to modify the hidden states at each position directly conditioned on the hidden states at all the other positions, which is missed by the previously proposed adapters. Moreover, we view its multiple attention heads as a mixture of experts and propose to average their weights during deployment, which further reduces its inference computation cost. On the GLUE benchmark, our tiny-attention adapter outperforms the other parameter-efficient transfer learning methods as well as full fine-tuning while only updating 0.05% of the parameters. On the FewGLUE benchmark, its performance is comparable to that of GPT-3 and PET.
+  }
+}
+
+@inproceedings{xie2022nc,
+  abbr = {EMNLP},
+  bibtex_show={true},
+  author =      {Shuo Xie and Jiahao Qiu and Ankita Pasad and Li Du and Qing Qu and Hongyuan Mei},
+  title =       {Hidden State Variability of Pretrained Language Models Can Guide Computation Reduction for Transfer Learning},
+  booktitle =   {Findings of EMNLP},
+  year =        {2022}, 
+  arxiv = {2210.10041}, 
+  abstract={
+    While transferring a pretrained language model, common approaches conventionally attach their task-specific classifiers to the top layer and adapt all the pretrained layers. We investigate whether one could make a task-specific selection on which subset of the layers to adapt and where to place the classifier. The goal is to reduce the computation cost of transfer learning methods (e.g. fine-tuning or adapter-tuning) without sacrificing its performance.
+   
+    We propose to select layers based on the variability of their hidden states given a task-specific corpus. We say a layer is already "well-specialized" in a task if the within-class variability of its hidden states is low relative to the between-class variability. Our variability metric is cheap to compute and doesn't need any training or hyperparameter tuning. It is robust to data imbalance and data scarcity. Extensive experiments on the GLUE benchmark demonstrate that selecting layers based on our metric can yield significantly stronger performance than using the same number of top layers and often match the performance of fine-tuning or adapter-tuning the entire language model.
+  }
+}
+
 @inproceedings{xue2022hypro,
   abbr = {NeurIPS},
   bibtex_show={true},
