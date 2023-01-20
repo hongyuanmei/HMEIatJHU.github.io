@@ -14,10 +14,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    - name: Setup Ruby
+    - name: Setup Ruby, JRuby and TruffleRuby
       uses: actions/setup-ruby@v1
-      with:
-        ruby-version: '2.7'
     - name: Enable bundler cache
       uses: actions/cache@v2
       with:
