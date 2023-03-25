@@ -22,6 +22,7 @@ I am currently working as a Research Assistant Professor at Toyota Technological
 My research goal is to enable computers to reason about the real world. 
 To achieve this goal, I develop machine learning models and algorithms for time series modeling and natural language understanding. 
 
-**I am looking for talented undergrad/Masters/PhD students to work with on interesting research projects. Please read [this post]({{ '/recruitment/' | relative_url }}) for more details.**
+<!-- **I am looking for talented undergrad/Masters/PhD students to work with on interesting research projects. Please read [this post]({{ '/recruitment/' | relative_url }}) for more details.** -->
+**I am currently looking for 1--2 research assistants. Please read [this post]({{ '/recruitment/' | relative_url }}) for more details.**
 
 My research students can be found [HERE]({{ '/students/' | relative_url }}). 
