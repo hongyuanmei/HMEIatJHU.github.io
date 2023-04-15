@@ -4,6 +4,20 @@
 @string{aps = {American Physical Society,}}
 
 
+@article{tsai2023game, 
+  abbr = {arxiv},
+  bibtex_show = {true},
+  title = {Can Large Language Models Play Text Games Well? Current State-of-the-Art and Open Questions},
+  author = {Chen Feng Tsai, Xiaochen Zhou, Sierra S. Liu, Jing Li, Mo Yu, Hongyuan Mei}, 
+  journal={arXiv preprint},
+  year={2023}, 
+  arxiv={2304.02868}, 
+  abstract = {
+    Large language models (LLMs) such as ChatGPT and GPT-4 have recently demonstrated their remarkable abilities of communicating with human users. In this technical report, we take an initiative to investigate their capacities of playing text games, in which a player has to understand the environment and respond to situations by having dialogues with the game world. Our experiments show that ChatGPT performs competitively compared to all the existing systems but still exhibits a low level of intelligence. Precisely, ChatGPT can not construct the world model by playing the game or even reading the game manual; it may fail to leverage the world knowledge that it already has; it cannot infer the goal of each step as the game progresses. Our results open up new research questions at the intersection of artificial intelligence, machine learning, and natural language processing.
+  }
+}
+
+
 @article{zhao2023logic,
   abbr = {arxiv},
   bibtex_show = {true},
@@ -26,6 +40,7 @@
   title = {Continuous-Time Decision Transformer for Healthcare Applications}, 
   booktitle = {AISTATS}, 
   year = {2023}, 
+  code = {https://github.com/ZhiyueZ/CTDT}, 
   abstract = {
     Offline reinforcement learning is a promising approach for training intelligent medical agents to learn treatment policies and assist decision making in many healthcare applications, such as scheduling clinical visits and assigning dosages for patients with chronic conditions. In this paper, we investigate the potential usefulness of Decision Transformer---a new offline reinforcement learning paradigm---in medical domains where decision making in continuous time is desired. As Decision Transformer only handles discrete-time (or, turn-based) sequential decision making scenarios, we generalize it to Continuous-Time Decision Transformer that not only considers the past clinical measurements and treatments but also the timings of previous visits, and learns to suggest the timings of future visits as well as the treatment plan at each visit. Extensive experiments on synthetic datasets and simulators motivated by real-world medical applications demonstrate that Continuous-Time Decision Transformer is able to outperform competitors and has clinical utility in terms of improving patients' health and prolonging their survival by learning high-performance policies from logged data generated using policies of different levels of quality.
   }
@@ -53,6 +68,7 @@
   booktitle =   {Findings of EMNLP},
   year =        {2022}, 
   arxiv = {2210.10041}, 
+  code = {https://github.com/shuox20/variability-efficient-tuning}, 
   abstract={
     While transferring a pretrained language model, common approaches conventionally attach their task-specific classifiers to the top layer and adapt all the pretrained layers. We investigate whether one could make a task-specific selection on which subset of the layers to adapt and where to place the classifier. The goal is to reduce the computation cost of transfer learning methods (e.g. fine-tuning or adapter-tuning) without sacrificing its performance.
    
