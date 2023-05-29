@@ -3,6 +3,19 @@
 
 @string{aps = {American Physical Society,}}
 
+@article{shi2023abductive, 
+  abbr = {arxiv},
+  bibtex_show = {true},
+  title = {Language Models Can Improve Event Prediction by Few-Shot Abductive Reasoning},
+  author = {Shi, Xiaoming and Xue, Siqiao and Wang, Kangrui and Zhou, Fan and Zhang, James Y. and Zhou, Jun and Tan, Chenhao and Mei, Hongyuan}, 
+  code = {https://github.com/iLampard/ep_llm},
+  journal={arXiv preprint},
+  year={2023}, 
+  arxiv={2305.16646}, 
+  abstract = {
+    Large language models have shown astonishing performance on a wide range of reasoning tasks. In this paper, we investigate whether they could reason about real-world events and help improve the prediction accuracy of event sequence models. We design a modeling and prediction framework where a large language model performs abductive reasoning to assist an event sequence model: the event model proposes predictions on future events given the past; instructed by a few expert-annotated demonstrations, the language model learns to suggest possible causes for each proposal; a search module finds out the previous events that match the causes; a scoring function learns to examine whether the retrieved events could actually cause the proposal. Through extensive experiments on two challenging real-world datasets (Amazon Review and GDELT), we demonstrate that our framework -- thanks to the reasoning ability of language models -- could significantly outperform the state-of-the-art event sequence models.
+  }
+}
 
 @inproceedings{gu2023robust, 
   abbr = {ACL},
