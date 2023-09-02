@@ -30,19 +30,6 @@
   }
 }
 
-@inproceedings{gu2023robust, 
-  abbr = {ACL},
-  bibtex_show = {true},
-  title = {Robustness of Learning from Task Instructions},
-  author = {Gu, Jiasheng and Zhao, Hongyu and Xu, Hanzi and Nie, Liangyu and Mei, Hongyuan and Yin, Wenpeng}, 
-  booktitle = {Findings of ACL},
-  year={2023}, 
-  arxiv={2212.03813}, 
-  abstract = {
-    Traditional supervised learning mostly works on individual tasks and requires training on a large set of task-specific examples. This paradigm seriously hinders the development of task generalization since preparing a task-specific example set is costly. To build a system that can quickly and easily generalize to new tasks, task instructions have been adopted as an emerging trend of supervision recently. These instructions give the model the definition of the task and allow the model to output the appropriate answer based on the instructions and inputs. However, task instructions are often expressed in different forms, which can be interpreted from two threads: first, some instructions are short sentences and are pretrained language model (PLM) oriented, such as prompts, while other instructions are paragraphs and are human-oriented, such as those in Amazon MTurk; second, different end-users very likely explain the same task with instructions of different textual expressions. A robust system for task generalization should be able to handle any new tasks regardless of the variability of instructions. However, the system robustness in dealing with instruction-driven task generalization is still unexplored. This work investigates the system robustness when the instructions of new tasks are (i) manipulated, (ii) paraphrased, or (iii) from different levels of conciseness. To our knowledge, this is the first work that systematically studies how robust a PLM is when it is supervised by instructions with different factors of variability.
-  }
-}
-
 
 @article{du2023lookahead, 
   abbr = {arxiv},
@@ -83,6 +70,20 @@
   code = {https://github.com/cindermond/explicit-planning-for-reasoning}, 
   abstract = {
     Language models have been shown to perform remarkably well on a wide range of natural language processing tasks. In this paper, we propose a novel system that uses language models to perform multi-step logical reasoning. Our system incorporates explicit planning into its inference procedure, thus able to make more informed reasoning decisions at each step by looking ahead into their future effects. In our experiments, our full system significantly outperforms other competing systems. On a multiple-choice question answering task, our system performs competitively compared to GPT-3-davinci despite having only around 1.5B parameters. We conduct several ablation studies to demonstrate that explicit planning plays a crucial role in the system's performance.
+  }
+}
+
+
+@inproceedings{gu2023robust, 
+  abbr = {ACL},
+  bibtex_show = {true},
+  title = {Robustness of Learning from Task Instructions},
+  author = {Gu, Jiasheng and Zhao, Hongyu and Xu, Hanzi and Nie, Liangyu and Mei, Hongyuan and Yin, Wenpeng}, 
+  booktitle = {Findings of ACL},
+  year={2023}, 
+  arxiv={2212.03813}, 
+  abstract = {
+    Traditional supervised learning mostly works on individual tasks and requires training on a large set of task-specific examples. This paradigm seriously hinders the development of task generalization since preparing a task-specific example set is costly. To build a system that can quickly and easily generalize to new tasks, task instructions have been adopted as an emerging trend of supervision recently. These instructions give the model the definition of the task and allow the model to output the appropriate answer based on the instructions and inputs. However, task instructions are often expressed in different forms, which can be interpreted from two threads: first, some instructions are short sentences and are pretrained language model (PLM) oriented, such as prompts, while other instructions are paragraphs and are human-oriented, such as those in Amazon MTurk; second, different end-users very likely explain the same task with instructions of different textual expressions. A robust system for task generalization should be able to handle any new tasks regardless of the variability of instructions. However, the system robustness in dealing with instruction-driven task generalization is still unexplored. This work investigates the system robustness when the instructions of new tasks are (i) manipulated, (ii) paraphrased, or (iii) from different levels of conciseness. To our knowledge, this is the first work that systematically studies how robust a PLM is when it is supervised by instructions with different factors of variability.
   }
 }
 
