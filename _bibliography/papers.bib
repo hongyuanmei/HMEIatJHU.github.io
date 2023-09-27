@@ -16,17 +16,16 @@
   }
 }
 
-@article{shi2023abductive, 
+@article{tsai2023game, 
   abbr = {arxiv},
   bibtex_show = {true},
-  title = {Language Models Can Improve Event Prediction by Few-Shot Abductive Reasoning},
-  author = {Shi, Xiaoming and Xue, Siqiao and Wang, Kangrui and Zhou, Fan and Zhang, James Y. and Zhou, Jun and Tan, Chenhao and Mei, Hongyuan}, 
-  code = {https://github.com/iLampard/ep_llm},
+  title = {Can Large Language Models Play Text Games Well? Current State-of-the-Art and Open Questions},
+  author = {Tsai, Chen Feng and Zhou, Xiaochen and Liu, Sierra S. and Li, Jing and Yu, Mo and Mei, Hongyuan}, 
   journal={arXiv preprint},
   year={2023}, 
-  arxiv={2305.16646}, 
+  arxiv={2304.02868}, 
   abstract = {
-    Large language models have shown astonishing performance on a wide range of reasoning tasks. In this paper, we investigate whether they could reason about real-world events and help improve the prediction accuracy of event sequence models. We design a modeling and prediction framework where a large language model performs abductive reasoning to assist an event sequence model: the event model proposes predictions on future events given the past; instructed by a few expert-annotated demonstrations, the language model learns to suggest possible causes for each proposal; a search module finds out the previous events that match the causes; a scoring function learns to examine whether the retrieved events could actually cause the proposal. Through extensive experiments on two challenging real-world datasets (Amazon Review and GDELT), we demonstrate that our framework -- thanks to the reasoning ability of language models -- could significantly outperform the state-of-the-art event sequence models.
+    Large language models (LLMs) such as ChatGPT and GPT-4 have recently demonstrated their remarkable abilities of communicating with human users. In this technical report, we take an initiative to investigate their capacities of playing text games, in which a player has to understand the environment and respond to situations by having dialogues with the game world. Our experiments show that ChatGPT performs competitively compared to all the existing systems but still exhibits a low level of intelligence. Precisely, ChatGPT can not construct the world model by playing the game or even reading the game manual; it may fail to leverage the world knowledge that it already has; it cannot infer the goal of each step as the game progresses. Our results open up new research questions at the intersection of artificial intelligence, machine learning, and natural language processing.
   }
 }
 
@@ -45,20 +44,6 @@
 }
 
 
-@article{tsai2023game, 
-  abbr = {arxiv},
-  bibtex_show = {true},
-  title = {Can Large Language Models Play Text Games Well? Current State-of-the-Art and Open Questions},
-  author = {Tsai, Chen Feng and Zhou, Xiaochen and Liu, Sierra S. and Li, Jing and Yu, Mo and Mei, Hongyuan}, 
-  journal={arXiv preprint},
-  year={2023}, 
-  arxiv={2304.02868}, 
-  abstract = {
-    Large language models (LLMs) such as ChatGPT and GPT-4 have recently demonstrated their remarkable abilities of communicating with human users. In this technical report, we take an initiative to investigate their capacities of playing text games, in which a player has to understand the environment and respond to situations by having dialogues with the game world. Our experiments show that ChatGPT performs competitively compared to all the existing systems but still exhibits a low level of intelligence. Precisely, ChatGPT can not construct the world model by playing the game or even reading the game manual; it may fail to leverage the world knowledge that it already has; it cannot infer the goal of each step as the game progresses. Our results open up new research questions at the intersection of artificial intelligence, machine learning, and natural language processing.
-  }
-}
-
-
 @article{zhao2023logic,
   abbr = {arxiv},
   bibtex_show = {true},
@@ -70,6 +55,21 @@
   code = {https://github.com/cindermond/explicit-planning-for-reasoning}, 
   abstract = {
     Language models have been shown to perform remarkably well on a wide range of natural language processing tasks. In this paper, we propose a novel system that uses language models to perform multi-step logical reasoning. Our system incorporates explicit planning into its inference procedure, thus able to make more informed reasoning decisions at each step by looking ahead into their future effects. In our experiments, our full system significantly outperforms other competing systems. On a multiple-choice question answering task, our system performs competitively compared to GPT-3-davinci despite having only around 1.5B parameters. We conduct several ablation studies to demonstrate that explicit planning plays a crucial role in the system's performance.
+  }
+}
+
+
+@inproceedings{shi2023abductive, 
+  abbr = {NeurIPS}, 
+  bibtex_show = {true}, 
+  title = {Language Models Can Improve Event Prediction by Few-Shot Abductive Reasoning}, 
+  author = {Shi, Xiaoming and Xue, Siqiao and Wang, Kangrui and Zhou, Fan and Zhang, James Y. and Zhou, Jun and Tan, Chenhao and Mei, Hongyuan}, 
+  code = {https://github.com/iLampard/ep_llm}, 
+  booktitle = {NeurIPS}, 
+  year={2023}, 
+  arxiv={2305.16646}, 
+  abstract = {
+    Large language models have shown astonishing performance on a wide range of reasoning tasks. In this paper, we investigate whether they could reason about real-world events and help improve the prediction accuracy of event sequence models. We design a modeling and prediction framework where a large language model performs abductive reasoning to assist an event sequence model: the event model proposes predictions on future events given the past; instructed by a few expert-annotated demonstrations, the language model learns to suggest possible causes for each proposal; a search module finds out the previous events that match the causes; a scoring function learns to examine whether the retrieved events could actually cause the proposal. Through extensive experiments on two challenging real-world datasets (Amazon Review and GDELT), we demonstrate that our framework -- thanks to the reasoning ability of language models -- could significantly outperform the state-of-the-art event sequence models.
   }
 }
 
