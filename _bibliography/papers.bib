@@ -44,17 +44,17 @@
 }
 
 
-@article{zhao2023logic,
-  abbr = {arxiv},
+@inproceedings{zhao2023logic,
+  abbr = {EMNLP},
   bibtex_show = {true},
   title = {Explicit Planning Helps Language Models in Logical Reasoning},
   author = {Zhao, Hongyu and Wang, Kangrui and Yu, Mo and Mei, Hongyuan}, 
-  journal={arXiv preprint},
+  booktitle={EMNLP},
   year={2023}, 
   arxiv={2303.15714}, 
-  code = {https://github.com/cindermond/explicit-planning-for-reasoning}, 
+  code = {https://github.com/cindermond/leap}, 
   abstract = {
-    Language models have been shown to perform remarkably well on a wide range of natural language processing tasks. In this paper, we propose a novel system that uses language models to perform multi-step logical reasoning. Our system incorporates explicit planning into its inference procedure, thus able to make more informed reasoning decisions at each step by looking ahead into their future effects. In our experiments, our full system significantly outperforms other competing systems. On a multiple-choice question answering task, our system performs competitively compared to GPT-3-davinci despite having only around 1.5B parameters. We conduct several ablation studies to demonstrate that explicit planning plays a crucial role in the system's performance.
+    Language models have been shown to perform remarkably well on a wide range of natural language processing tasks. In this paper, we propose LEAP, a novel system that uses language models to perform multi-step logical reasoning and incorporates explicit planning into the inference procedure. Explicit planning enables the system to make more informed reasoning decisions at each step by looking ahead into their future effects. Moreover, we propose a training strategy that safeguards the planning process from being led astray by spurious features. Our full system significantly outperforms other competing methods on multiple standard datasets. When using small T5 models as its core selection and deduction components, our system performs competitively compared to GPT-3 despite having only about 1B parameters (i.e., 175 times smaller than GPT-3). When using GPT-3.5, it significantly outperforms chain-of-thought prompting on the challenging PrOntoQA dataset. We have conducted extensive empirical studies to demonstrate that explicit planning plays a crucial role in the system's performance.
   }
 }
 
@@ -64,12 +64,12 @@
   bibtex_show = {true}, 
   title = {Language Models Can Improve Event Prediction by Few-Shot Abductive Reasoning}, 
   author = {Shi, Xiaoming and Xue, Siqiao and Wang, Kangrui and Zhou, Fan and Zhang, James Y. and Zhou, Jun and Tan, Chenhao and Mei, Hongyuan}, 
-  code = {https://github.com/iLampard/ep_llm}, 
+  code = {https://github.com/iLampard/lamp}, 
   booktitle = {NeurIPS}, 
   year={2023}, 
   arxiv={2305.16646}, 
   abstract = {
-    Large language models have shown astonishing performance on a wide range of reasoning tasks. In this paper, we investigate whether they could reason about real-world events and help improve the prediction accuracy of event sequence models. We design a modeling and prediction framework where a large language model performs abductive reasoning to assist an event sequence model: the event model proposes predictions on future events given the past; instructed by a few expert-annotated demonstrations, the language model learns to suggest possible causes for each proposal; a search module finds out the previous events that match the causes; a scoring function learns to examine whether the retrieved events could actually cause the proposal. Through extensive experiments on two challenging real-world datasets (Amazon Review and GDELT), we demonstrate that our framework -- thanks to the reasoning ability of language models -- could significantly outperform the state-of-the-art event sequence models.
+    Large language models have shown astonishing performance on a wide range of reasoning tasks. In this paper, we investigate whether they could reason about real-world events and help improve the prediction performance of event sequence models. We design LAMP, a framework that integrates a large language model in event prediction. Particularly, the language model performs abductive reasoning to assist an event sequence model: the event model proposes predictions on future events given the past; instructed by a few expert-annotated demonstrations, the language model learns to suggest possible causes for each proposal; a search module finds out the previous events that match the causes; a scoring function learns to examine whether the retrieved events could actually cause the proposal. Through extensive experiments on several challenging real-world datasets, we demonstrate that our framework---thanks to the reasoning capabilities of large language models---could significantly outperform the state-of-the-art event sequence models. 
   }
 }
 
@@ -100,6 +100,22 @@
     Offline reinforcement learning is a promising approach for training intelligent medical agents to learn treatment policies and assist decision making in many healthcare applications, such as scheduling clinical visits and assigning dosages for patients with chronic conditions. In this paper, we investigate the potential usefulness of Decision Transformer---a new offline reinforcement learning paradigm---in medical domains where decision making in continuous time is desired. As Decision Transformer only handles discrete-time (or, turn-based) sequential decision making scenarios, we generalize it to Continuous-Time Decision Transformer that not only considers the past clinical measurements and treatments but also the timings of previous visits, and learns to suggest the timings of future visits as well as the treatment plan at each visit. Extensive experiments on synthetic datasets and simulators motivated by real-world medical applications demonstrate that Continuous-Time Decision Transformer is able to outperform competitors and has clinical utility in terms of improving patients' health and prolonging their survival by learning high-performance policies from logged data generated using policies of different levels of quality.
   }
 }
+
+
+@inproceedings{qu2023bellman,
+  abbr = {AAAI}, 
+  bibtex_show={true},
+  title={Bellman Meets {H}awkes: Model-Based Reinforcement Learning via Temporal Point Processes},
+  author={Qu, Chao and Tan, Xiaoyu and Xue, Siqiao and Shi, Xiaoming and Zhang, James and Mei, Hongyuan},
+  booktitle = {AAAI},
+  year={2023}, 
+  arxiv = {2201.12569}, 
+  code = {https://github.com/Event-Driven-rl/Event-Driven-RL}, 
+  abstract={
+    We consider a sequential decision making problem where the agent faces the environment characterized by the stochastic discrete events and seeks an optimal intervention policy such that its long-term reward is maximized. This problem exists ubiquitously in social media, finance and health informatics but is rarely investigated by the conventional research in reinforcement learning. To this end, we present a novel framework of the model-based reinforcement learning where the agent's actions and observations are asynchronous stochastic discrete events occurring in continuous-time. We model the dynamics of the environment by Hawkes process with external intervention control term and develop an algorithm to embed such process in the Bellman equation which guides the direction of the value gradient. We demonstrate the superiority of our method in both synthetic simulator and real-world problem.
+  }
+}
+
 
 @inproceedings{zhao2022tiny,
   abbr = {EMNLP},
@@ -142,20 +158,6 @@
   code = {https://github.com/iLampard/hypro_tpp}, 
   abstract={
     In this paper, we tackle the important yet under-investigated problem of making long-horizon prediction of event sequences. Existing state-of-the-art models do not perform well at this task due to their autoregressive structure. We propose HYPRO, a hybridly normalized probabilistic model that naturally fits this task: its first part is an autoregressive base model that learns to propose predictions; its second part is an energy function that learns to reweight the proposals such that more realistic predictions end up with higher probabilities. We also propose efficient training and inference algorithms for this model. Experiments on multiple real-world datasets demonstrate that our proposed HYPRO model can significantly outperform previous models at making long-horizon predictions of future events. We also conduct a range of ablation studies to investigate the effectiveness of each component of our proposed methods.
-  }
-}
-
-@inproceedings{qu2023bellman,
-  abbr = {AAAI}, 
-  bibtex_show={true},
-  title={Bellman Meets {H}awkes: Model-Based Reinforcement Learning via Temporal Point Processes},
-  author={Qu, Chao and Tan, Xiaoyu and Xue, Siqiao and Shi, Xiaoming and Zhang, James and Mei, Hongyuan},
-  booktitle = {AAAI},
-  year={2023}, 
-  arxiv = {2201.12569}, 
-  code = {https://github.com/Event-Driven-rl/Event-Driven-RL}, 
-  abstract={
-    We consider a sequential decision making problem where the agent faces the environment characterized by the stochastic discrete events and seeks an optimal intervention policy such that its long-term reward is maximized. This problem exists ubiquitously in social media, finance and health informatics but is rarely investigated by the conventional research in reinforcement learning. To this end, we present a novel framework of the model-based reinforcement learning where the agent's actions and observations are asynchronous stochastic discrete events occurring in continuous-time. We model the dynamics of the environment by Hawkes process with external intervention control term and develop an algorithm to embed such process in the Bellman equation which guides the direction of the value gradient. We demonstrate the superiority of our method in both synthetic simulator and real-world problem.
   }
 }
 
