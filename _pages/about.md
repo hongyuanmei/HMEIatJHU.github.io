@@ -32,4 +32,7 @@ Currently, I am most interested in
 
 My research students can be found [HERE]({{ '/students/' | relative_url }}). 
 
+I am committed to promoting diversity, equity, and inclusion (DEI). 
+I am a faculty facilitator for [Girls Who Code](https://girlswhocode.com/). 
+
 **<span style="color:red">I am on job market for tenure-track faculty positions starting in 2024.</span>**

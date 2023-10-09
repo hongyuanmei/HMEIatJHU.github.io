@@ -2,7 +2,7 @@
 layout: post
 title: Basics of Writing Good Research Code
 date: 2021-08-01 17:09:00-0400
-description: a guide for writing replicable and well-structured research code
+description: a simple guide for writing research code
 comments: true
 ---
 
