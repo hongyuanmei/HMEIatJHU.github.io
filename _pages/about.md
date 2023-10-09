@@ -17,12 +17,19 @@ news: true  # includes a list of news items
 social: false  # includes social icons at the bottom of the page
 ---
 
-I am a computer scientist. 
-I am currently working as a Research Assistant Professor at Toyota Technological Institute at Chicago (TTIC). 
-My research goal is to enable computers to reason about the real world. 
-To achieve this goal, I develop machine learning models and algorithms for time series modeling and natural language understanding. 
+<!-- I am a computer scientist.  -->
+<!-- I am currently a Research Assistant Professor at Toyota Technological Institute at Chicago (TTIC).  -->
+I develop machine learning methods for reasoning about real-world events. 
+My research spans machine learning and natural language processing. 
+Currently, I am most interested in 
+- developing neural and neuro-symbolic models for time series; 
+- harnessing and improving the reasoning capabilities of large language models; 
+- building world models that learn from real-world interactions.  
+
 
 <!-- **I am looking for talented undergrad/Masters/PhD students to work with on interesting research projects. Please read [this post]({{ '/recruitment/' | relative_url }}) for more details.** -->
 <!-- **I am currently looking for 1--2 research assistants. Please read [this post]({{ '/recruitment/' | relative_url }}) for more details.** -->
 
 My research students can be found [HERE]({{ '/students/' | relative_url }}). 
+
+**<span style="color:red">I am on job market for tenure-track faculty positions starting in 2024.</span>**
