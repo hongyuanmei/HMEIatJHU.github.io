@@ -15,7 +15,7 @@ Currently, he is most interested in
 - building world models that learn from real-world interactions. 
 
 His research has been supported by a Bloomberg Data Science PhD Fellowship, the 2020 JHU Jelinek Memorial Award, and research gifts from Adobe and Ant Group. 
-His technical innovations have been integrated into real-world applications such as Alipay, the world’s largest mobile digital payment platform, which serves more than one billion users.
+His technical innovations have been integrated into real-world products such as Alipay, the world’s largest mobile digital payment platform, which serves more than one billion users.
 His research has been covered by [Fortune Magazine](https://fortune.com/2020/09/08/disco-bell-bottoms-big-hair-and-cutting-edge-a-i/) and [Tech At Bloomberg](https://www.techatbloomberg.com/blog/icml-2020-bloomberg-ph-d-fellow-combines-datalog-and-neural-networks-to-model-dynamic-databases/). 
 
 <!-- His research goal is to enable computers to reason about the real world.  -->
