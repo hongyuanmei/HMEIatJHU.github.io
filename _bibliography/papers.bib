@@ -3,6 +3,33 @@
 
 @string{aps = {American Physical Society,}}
 
+@article{zhou2024hypothesis, 
+  abbr = {arxiv},
+  bibtex_show = {true},
+  title = {Hypothesis Generation with Large Language Models},
+  author = {Zhou, Yangqiaoyu and Liu, Haokun and Srivastava, Tejes and Mei, Hongyuan and Tan, Chenhao}, 
+  journal={arXiv preprint},
+  year={2024}, 
+  arxiv={2404.04326}, 
+  abstract = {
+    Effective generation of novel hypotheses is instrumental to scientific progress. So far, researchers have been the main powerhouse behind hypothesis generation by painstaking data analysis and thinking (also known as the Eureka moment). In this paper, we examine the potential of large language models (LLMs) to generate hypotheses. We focus on hypothesis generation based on data (i.e., labeled examples). To enable LLMs to handle arbitrarily long contexts, we generate initial hypotheses from a small number of examples and then update them iteratively to improve the quality of hypotheses. Inspired by multi-armed bandits, we design a reward function to inform the exploitation-exploration tradeoff in the update process. Our algorithm is able to generate hypotheses that enable much better predictive performance than few-shot prompting in classification tasks, improving accuracy by 31.7% on a synthetic dataset and by 13.9%, 3.3% and, 24.9% on three real-world datasets. We also outperform supervised learning by 12.8% and 11.2% on two challenging real-world datasets. Furthermore, we find that the generated hypotheses not only corroborate human-verified theories but also uncover new insights for the tasks.
+  }
+}
+
+
+@article{ding2024mango, 
+  abbr = {arxiv},
+  bibtex_show = {true},
+  title = {MANGO: A Benchmark for Evaluating Mapping and Navigation Abilities of Large Language Models},
+  author = {Ding, Peng and Fang, Jiading and Li, Peng and Wang, Kangrui and Zhou, Xiaochen and Yu, Mo and Li, Jing and Walter, Matthew R and Mei, Hongyuan}, 
+  journal={arXiv preprint},
+  year={2024}, 
+  arxiv={2403.19913}, 
+  abstract = {
+    Large language models such as ChatGPT and GPT-4 have recently achieved astonishing performance on a variety of natural language processing tasks. In this paper, we propose MANGO, a benchmark to evaluate their capabilities to perform text-based mapping and navigation. Our benchmark includes 53 mazes taken from a suite of textgames: each maze is paired with a walkthrough that visits every location but does not cover all possible paths. The task is question-answering: for each maze, a large language model reads the walkthrough and answers hundreds of mapping and navigation questions such as "How should you go to Attic from West of House?" and "Where are we if we go north and east from Cellar?". Although these questions are easy to humans, it turns out that even GPT-4, the best-to-date language model, performs poorly at answering them. Further, our experiments suggest that a strong mapping and navigation ability would benefit large language models in performing relevant downstream tasks, such as playing textgames. Our MANGO benchmark will facilitate future research on methods that improve the mapping and navigation capabilities of language models. We host our leaderboard, data, code, and evaluation program at https://oaklight.github.io/mgwb/ and https://github.com/oaklight/mango/.
+  }
+}
+
 @inproceedings{yoneda2023llm, 
   abbr = {ICRA},
   bibtex_show = {true}, 
