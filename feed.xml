@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2024-12-21T04:25:30+00:00</updated><id>/feed.xml</id><title type="html">blank</title><subtitle>The academic homepage of Hongyuan Mei
+</subtitle><entry><title type="html">Basics of Writing Good Research Code</title><link href="/blog/2021/researchcodebasics/" rel="alternate" type="text/html" title="Basics of Writing Good Research Code" /><published>2021-08-01T21:09:00+00:00</published><updated>2021-08-01T21:09:00+00:00</updated><id>/blog/2021/researchcodebasics</id><content type="html" xml:base="/blog/2021/researchcodebasics/"><![CDATA[<p>Writing <em>good</em> code is very important in research because</p>
+<ul>
+  <li>it will help other researchers replicate your results and make further progress;</li>
+  <li>it will make it easy to maintain and extend it;</li>
+  <li>it will make it easy to split work across collaborators;</li>
+  <li>it will save you from nightmares when you have to revisit it a couple of years later;</li>
+  <li>…</li>
+</ul>
+
+<p>Despite its importance, I have never seen a tutorial that teaches novice researchers how to write replicable and well-structured code—so I hope this blog post can fill the gap. 
+To be fair, I am not the inventor of any good practice that I am introducing here; I learned them mostly by reading good code (e.g., <a href="https://github.com/pytorch/pytorch">PyTorch source code</a>).</p>
+
+<p>My research focus is machine learning, and I will illustrate the principles and practices with a machine learning project. 
+In this <a href="https://github.com/HMEIatJHU/research-code-mini-tutorial/blob/main/binary-classification.ipynb">jupyter notebook</a>, we aim to train a 2-layer feedforward neural network (also called multi-layer perceptron or MLP) to classify 2-dimensional data generated from 2 different Gaussian distributions. 
+The screenshots of this notebook is shown below:</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/bin-class-1.jpg" data-zoomable="" />
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/bin-class-2.jpg" data-zoomable="" />
+    </div>
+</div>
+
+<p><br />
+This is fairly nice code: clear flow, reasonable class design, minimum duplicate, and sufficient documentation. 
+But <em>what if</em>:</p>
+<ul>
+  <li>we want to produce exactly the same results on another computer at another time?</li>
+  <li>we want to reuse these classes in another project without copy-pasting the actual code?</li>
+  <li>we want to try another model with other things unchanged?</li>
+  <li>we want to have a collaborator take over a specific portion of the code?</li>
+  <li>we believe there are bugs in a specific class and we have to run tens of tests on that class?</li>
+  <li>…</li>
+</ul>
+
+<p>This blog post will introduce plausible solutions to these problems.</p>
+
+<h2 id="step-1-setup">Step-1 Setup</h2>
+<p>Note that we <code class="language-plaintext highlighter-rouge">import torch</code> in the code above, but a different computer may have a different version of torch installed, making it difficult to reproduce our results or even run your code there. 
+That being said, we want a way to tell the computer to use the specific version of torch that the code was developed in; that is what a <code class="language-plaintext highlighter-rouge">setup.py</code> can do for us! 
+Here is the <code class="language-plaintext highlighter-rouge">setup.py</code> that I wrote for this small educational project:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="code"><pre><span class="kn">import</span> <span class="n">setuptools</span>
+<span class="kn">from</span> <span class="n">setuptools</span> <span class="kn">import</span> <span class="n">setup</span>
+
+<span class="nf">setup</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="sh">'</span><span class="s">simpclass</span><span class="sh">'</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="sh">'</span><span class="s">1.0</span><span class="sh">'</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="sh">'</span><span class="s">a simple classification task</span><span class="sh">'</span><span class="p">,</span>
+    <span class="n">packages</span><span class="o">=</span><span class="n">setuptools</span><span class="p">.</span><span class="nf">find_packages</span><span class="p">(),</span>
+    <span class="n">install_requires</span><span class="o">=</span><span class="p">[</span>
+        <span class="sh">'</span><span class="s">torch==1.9.0</span><span class="sh">'</span><span class="p">,</span>
+        <span class="sh">'</span><span class="s">numpy</span><span class="sh">'</span><span class="p">,</span> 
+        <span class="sh">'</span><span class="s">matplotlib</span><span class="sh">'</span>
+        <span class="p">]</span>
+    <span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>In the <code class="language-plaintext highlighter-rouge">setup.py</code>, you can specify the <code class="language-plaintext highlighter-rouge">name</code>, <code class="language-plaintext highlighter-rouge">version</code>, and <code class="language-plaintext highlighter-rouge">description</code> of the project. 
+Then you can specify the libraries—as well as their <em>versions</em>—that this project requires. 
+In this example, I require <code class="language-plaintext highlighter-rouge">torch==1.9.0</code> but <code class="language-plaintext highlighter-rouge">numpy</code> and <code class="language-plaintext highlighter-rouge">matplotlib</code> can be any version (but you do need them to be compatible with <code class="language-plaintext highlighter-rouge">torch==1.9.0</code>).</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">setup.py</code> should be placed in the root directory of the project. 
+Next to it will be a directory called <code class="language-plaintext highlighter-rouge">simpclass</code> which stores the source code of this project. 
+The directory structure is as follows:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">.</span> 
++-- setup.py 
++-- simpclass
+    +-- ... 
+</code></pre></div></div>
+<p>where <code class="language-plaintext highlighter-rouge">...</code> is the source code.</p>
+
+<p>Now the <code class="language-plaintext highlighter-rouge">simpclass</code> package will be installed once you type the following command line in your terminal</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install</span> <span class="nb">.</span>
+</code></pre></div></div>
+<p>All the dependencies (e.g., <code class="language-plaintext highlighter-rouge">torch==1.9.0</code>) will be automatically installed as the <code class="language-plaintext highlighter-rouge">setup.py</code> specifies. 
+Now you can <code class="language-plaintext highlighter-rouge">import simpclass</code> and use any module (e.g., <code class="language-plaintext highlighter-rouge">MLP</code> or <code class="language-plaintext highlighter-rouge">Classfier</code>) in it, just like how you would use modules from <code class="language-plaintext highlighter-rouge">torch</code>.</p>
+
+<p>What if the <code class="language-plaintext highlighter-rouge">simpclass</code> package is still in development mode and you want to edit its content? 
+Just install it with the argument <code class="language-plaintext highlighter-rouge">-e</code> which stands for “editable”:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install</span> <span class="nt">-e</span> <span class="nb">.</span>
+</code></pre></div></div>
+
+<h2 id="step-2-structure-structure-structure">Step-2 Structure! Structure! Structure!</h2>
+
+<p>We of course don’t want to put just that single jupyter notebook into the <code class="language-plaintext highlighter-rouge">simpclass</code> directory. 
+In fact, we should break it into pieces, place each class into the right file, and place each file into the right subdirectory. 
+This way, we can develop and test each component (e.g., <code class="language-plaintext highlighter-rouge">MLP</code> or <code class="language-plaintext highlighter-rouge">Classifier</code>) of the project without interfering other parts, and multiple contributors can work on their assignments in parallel. 
+For this project, I think the following structure is neat and intuitive:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">.</span> 
++-- setup.py 
++-- simpclass
+    +-- managers
+        +-- __init__.py 
+        +-- classifier.py 
+    +-- models
+        +-- __init__.py 
+        +-- mlp.py 
+    +-- run 
+        +-- __init__.py
+        +-- test.py
+        +-- train.py 
+        +-- utils.py
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">classifier.py</code> and <code class="language-plaintext highlighter-rouge">mlp.py</code> contain the class definitions of <code class="language-plaintext highlighter-rouge">Classifier</code> and <code class="language-plaintext highlighter-rouge">MLP</code> respectively. 
+Their full content can be found in <a href="https://github.com/HMEIatJHU/research-code-mini-tutorial">this Github repo</a>. 
+Here are their first few lines:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="code"><pre><span class="c1"># code migrated from: https://www.kaggle.com/basu369victor/pytorch-tutorial-the-classification
+</span><span class="kn">import</span> <span class="n">torch</span>
+<span class="kn">from</span> <span class="n">torch</span> <span class="kn">import</span> <span class="n">nn</span>
+<span class="kn">from</span> <span class="n">torch</span> <span class="kn">import</span> <span class="n">optim</span> 
+
+<span class="k">class</span> <span class="nc">Classifier</span><span class="p">():</span>
+    
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">criterion</span><span class="o">=</span><span class="n">nn</span><span class="p">.</span><span class="n">CrossEntropyLoss</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="n">optim</span><span class="p">.</span><span class="n">Adam</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">criterion</span> <span class="o">=</span> <span class="nf">criterion</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="code"><pre><span class="kn">import</span> <span class="n">torch</span>
+<span class="kn">from</span> <span class="n">torch</span> <span class="kn">import</span> <span class="n">nn</span>
+
+<span class="k">class</span> <span class="nc">MLP</span><span class="p">(</span><span class="n">nn</span><span class="p">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="c1"># a simple 2-layer MLP model
+</span>    
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">input_dim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">output_dim</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">n_neurons</span> <span class="o">=</span> <span class="mi">16</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="n">nn</span><span class="p">.</span><span class="n">Sigmoid</span><span class="p">):</span>
+        <span class="nf">super</span><span class="p">(</span><span class="n">MLP</span><span class="p">,</span> <span class="n">self</span><span class="p">).</span><span class="nf">__init__</span><span class="p">()</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">input_dim</span> <span class="o">=</span> <span class="n">input_dim</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">output_dim</span> <span class="o">=</span> <span class="n">output_dim</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>I created separate subdirectories—<code class="language-plaintext highlighter-rouge">managers</code> and <code class="language-plaintext highlighter-rouge">models</code>—for the project to be extensible: 
+if we ever want to try a new training method or a new model, we can simply add modules into the corresponding folders.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">__init__.py</code> are empty files: their existence tells the <code class="language-plaintext highlighter-rouge">setup.py</code> to install all the modules in the corresponding folders.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">test.py</code> and <code class="language-plaintext highlighter-rouge">train.py</code> both start with:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="code"><pre><span class="kn">import</span> <span class="n">os</span>
+<span class="kn">import</span> <span class="n">torch</span>
+<span class="kn">from</span> <span class="n">simpclass.models.mlp</span> <span class="kn">import</span> <span class="n">MLP</span>
+<span class="kn">from</span> <span class="n">simpclass.managers.classifier</span> <span class="kn">import</span> <span class="n">Classifier</span>
+<span class="kn">from</span> <span class="n">utils</span> <span class="kn">import</span> <span class="n">load_data</span><span class="p">,</span> <span class="n">load_model</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+
+    <span class="c1"># FIX RANDOM SEED!!!
+</span>    <span class="n">torch</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="nf">manual_seed</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>The line of <code class="language-plaintext highlighter-rouge">torch.random.manual_seed(123)</code> works to fix the seed of the random number generator of <code class="language-plaintext highlighter-rouge">torch</code>, so that the program will generate the same random numbers on multiple executions on the same machine (or sometimes even on different machines). 
+This is important for reproducibility and debugging.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">utils.py</code> contains utility functions that are used for data-loading, model-saving, model-loading, etc. 
+To not distract readers from the big picture, I choose to not dive into further details; 
+interested readers are welcome to check out <a href="https://github.com/HMEIatJHU/research-code-mini-tutorial">this Github repo</a> for details.</p>
+
+<h2 id="step-3-where-do-tests-go">Step-3 Where Do Tests Go?</h2>
+
+<p>Suppose that you are the author of <code class="language-plaintext highlighter-rouge">mlp.py</code>. 
+Before committing your contribution to the shared codebase, you would like to test it. 
+One way is to run the <code class="language-plaintext highlighter-rouge">test.py</code> or <code class="language-plaintext highlighter-rouge">train.py</code> with it, but that may not necessarily validate its correctness. 
+You may have good ideas to do it in some other ways, and you don’t want them to interfere with the other (perhaps already well-tested) components—that is when you should create a <code class="language-plaintext highlighter-rouge">tests</code> folder and start working there!</p>
+
+<p>Typically, the <code class="language-plaintext highlighter-rouge">tests</code> folder should be put in the same place as your source code folder, and mirrors its structure:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">.</span> 
++-- setup.py 
++-- simpclass
+    +-- ...
+    +-- models
+        +-- __init__.py 
+        +-- mlp.py 
+    +-- ... 
++-- tests
+    +-- ...
+    +-- models
+        +-- __init__.py 
+        +-- mlp_tests.py 
+    +-- ...
+</code></pre></div></div>
+<p>The <code class="language-plaintext highlighter-rouge">mlp_tests.py</code> is where you want to write down your testing code for the <code class="language-plaintext highlighter-rouge">mlp.py</code> module.</p>
+
+<p>You should always do your best to test your code, to make sure it is a real contribution but not a bug-factory. :-)</p>
+
+<h2 id="step-0-virtual-environment">Step-0 Virtual Environment</h2>
+
+<p>So far so good? 
+Maybe someone would ask “what if I have another research project at the same time, which contains some code that can only properly run with <code class="language-plaintext highlighter-rouge">torch=1.4.0</code>? How come I could have <code class="language-plaintext highlighter-rouge">torch=1.4.0</code> and <code class="language-plaintext highlighter-rouge">torch=1.9.0</code> at the same time?”</p>
+
+<p>Well, you can—in <em>virtual environments</em>! 
+Your operating system provides you a base environment, on top of which you are allowed to create as many virtual environments as you want. 
+Actually, I recommend that the <em>first</em> thing you do for <em>each</em> of your research projects is to create a <em>separate</em> virtual environment for it—that is why I call this section “Step-0” (even though it is the last thing I talk about)!</p>
+
+<p>The management of virtual environments is out of the scope of this blog post. 
+Interested readers are encouraged to read <a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">the document of <code class="language-plaintext highlighter-rouge">conda</code></a>. (Yes, I assume everyone in machine learning uses <code class="language-plaintext highlighter-rouge">conda</code>.)</p>]]></content><author><name></name></author><summary type="html"><![CDATA[a simple guide for writing research code]]></summary></entry></feed>
