@@ -3,12 +3,27 @@
 
 @string{aps = {American Physical Society,}}
 
-@article{zhou2024hypothesis, 
+
+@article{xue2024famma, 
   abbr = {arxiv},
+  bibtex_show = {true},
+  title = {FAMMA: A Benchmark for Financial Domain Multilingual Multimodal Question Answering},
+  author = {Xue, Siqiao and Chen, Tingting and Zhou, Fan and Dai, Qingyang and Chu, Zhixuan and Mei, Hongyuan},
+  journal={arXiv preprint},
+  year={2024}, 
+  arxiv={2410.04526}, 
+  abstract = {
+    In this paper, we introduce FAMMA, an open-source benchmark for financial multilingual multimodal question answering (QA). Our benchmark aims to evaluate the abilities of multimodal large language models (MLLMs) in answering questions that require advanced financial knowledge and sophisticated reasoning. It includes 1,758 meticulously collected question-answer pairs from university textbooks and exams, spanning 8 major subfields in finance including corporate finance, asset management, and financial engineering. Some of the QA pairs are written in Chinese or French, while a majority of them are in English. These questions are presented in a mixed format combining text and heterogeneous image types, such as charts, tables, and diagrams. We evaluate a range of state-of-the-art MLLMs on our benchmark, and our analysis shows that FAMMA poses a significant challenge for these models. Even advanced systems like GPT-4o and Claude-35-Sonnet achieve only 42\% accuracy. Additionally, the open-source Qwen2-VL lags notably behind its proprietary counterparts. Lastly, we explore GPT o1-style reasoning chains to enhance the models' reasoning capabilities, which significantly improve error correction. Our FAMMA benchmark will facilitate future research to develop expert systems in financial QA. The leaderboard is available at https://famma-bench.github.io/famma/.
+  }
+}
+
+
+@inproceedings{zhou2024hypothesis, 
+  abbr = {NLP4Sci},
   bibtex_show = {true},
   title = {Hypothesis Generation with Large Language Models},
   author = {Zhou, Yangqiaoyu and Liu, Haokun and Srivastava, Tejes and Mei, Hongyuan and Tan, Chenhao}, 
-  journal={arXiv preprint},
+  booktitle = {EMNLP Workshop of NLP4Science},
   year={2024}, 
   arxiv={2404.04326}, 
   abstract = {
@@ -17,12 +32,12 @@
 }
 
 
-@article{ding2024mango, 
-  abbr = {arxiv},
+@inproceedings{ding2024mango, 
+  abbr = {COLM},
   bibtex_show = {true},
   title = {MANGO: A Benchmark for Evaluating Mapping and Navigation Abilities of Large Language Models},
   author = {Ding, Peng and Fang, Jiading and Li, Peng and Wang, Kangrui and Zhou, Xiaochen and Yu, Mo and Li, Jing and Walter, Matthew R and Mei, Hongyuan}, 
-  journal={arXiv preprint},
+  booktitle = {COLM},
   year={2024}, 
   arxiv={2403.19913}, 
   abstract = {

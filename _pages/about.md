@@ -3,7 +3,7 @@ layout: about
 title: about
 permalink: /
 description: 
-  Senior Research Scientist at Google
+  Senior Research Scientist at Google DeepMind
 profile:
   align: right
   image: ttic-pro.jpg
@@ -20,11 +20,11 @@ social: false  # includes social icons at the bottom of the page
 <!-- I am a computer scientist.  -->
 <!-- I am currently a Research Assistant Professor at Toyota Technological Institute at Chicago (TTIC).  -->
 I develop machine learning methods for reasoning about real-world events. 
-My research spans machine learning and natural language processing. 
-Currently, I am most interested in 
-- developing neural and neuro-symbolic models for time series; 
-- harnessing and improving the reasoning capabilities of large language models; 
-- building world models that learn from real-world interactions.  
+My research spans machine learning and natural language processing.
+Currently, I am most interested in
+- developing neural and neuro-symbolic methods;
+- harnessing and improving the reasoning capabilities of large language models;
+- building world models that learn from real-world interactions.
 
 
 <!-- **I am looking for talented undergrad/Masters/PhD students to work with on interesting research projects. Please read [this post]({{ '/recruitment/' | relative_url }}) for more details.** -->
