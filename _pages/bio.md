@@ -6,7 +6,7 @@ description: A bio for use in announcements, introductions, etc.
 nav: true
 ---
 
-Hongyuan Mei is currently a Senior Research Scientist at Google. 
+Hongyuan Mei is currently a Senior Research Scientist at Google DeepMind. 
 Previously, he was a Research Assistant Professor at Toyota Technological Institute at Chicago (TTIC), on the campus of University of Chicago. 
 <!-- He is broadly interested in developing machine learning methods for reasoning about real-world events.  -->
 His research spans machine learning and natural language processing. 

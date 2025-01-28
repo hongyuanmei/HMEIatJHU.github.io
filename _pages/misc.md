@@ -6,7 +6,7 @@ title: misc
 nav: true
 ---
 
-When I am away from my workstation, I may be:
+When I am away from my research, I may be:
 
 * Playing Texas Hold'em or other card games
 

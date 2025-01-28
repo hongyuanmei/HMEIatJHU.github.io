@@ -6,11 +6,11 @@ title: service
 nav: true
 ---
 
-I am committed to promoting diversity, equity, and inclusion (DEI). 
-My activities include: 
-- Faculty facilitator for [Girls Who Code](https://girlswhocode.com/)
+<!-- I am committed to promoting diversity, equity, and inclusion (DEI).  -->
+<!-- My activities include: 
+- Faculty facilitator for [Girls Who Code](https://girlswhocode.com/) -->
 
-I regularly provide professional services to 
+I provide services to 
 - Journals 
     - Reviewer for JMLR (2021, 2022)
 - Conferences
@@ -19,6 +19,8 @@ I regularly provide professional services to
 - Workshops
     - Co-organizer for ACL Workshop on Representation Learning for NLP (RepL4NLP) (2018) 
     - Reviewer for ACL Workshop on Language Grounding for Robotics (RoboNLP) (2017), AAAI Symposium on Natural Communication for Human-Robot Collaboration (NCHRC) (2018)
+- Outreach activities
+    - Faculty facilitator for [Girls Who Code](https://girlswhocode.com/)
 
 My services are recognized by 
 - Outstanding Reviewer for ICLR 2021

@@ -35,7 +35,7 @@ Previously, I was a Research Assistant Professor at TTIC.
 I work closely with my [research students]({{ '/students/' | relative_url }}).
 <!-- My research students can be found [HERE]({{ '/students/' | relative_url }}).  -->
 
-I am committed to promoting diversity, equity, and inclusion (DEI). 
-I am a faculty facilitator for [Girls Who Code](https://girlswhocode.com/). 
+<!-- I am committed to promoting diversity, equity, and inclusion (DEI). 
+I am a faculty facilitator for [Girls Who Code](https://girlswhocode.com/).  -->
 
 <!-- **<span style="color:red">I am on job market for tenure-track faculty positions starting in 2024.</span>** -->
