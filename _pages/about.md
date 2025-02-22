@@ -35,6 +35,12 @@ Previously, I was a Research Assistant Professor at TTIC.
 I work closely with my [research students]({{ '/students/' | relative_url }}).
 <!-- My research students can be found [HERE]({{ '/students/' | relative_url }}).  -->
 
+**<span style="color:red">I am always looking for self-motivated students to work together.</span>**
+If you are interested, please email me at 
+<a href="mailto:hongyuan@ttic.edu">hongyuan@ttic.edu</a>
+with the subject "Student collaborator - Your Name". Thank you!
+
+
 <!-- I am committed to promoting diversity, equity, and inclusion (DEI). 
 I am a faculty facilitator for [Girls Who Code](https://girlswhocode.com/).  -->
 
