@@ -8,10 +8,8 @@ description:
 profile:
   align: right
   image: ttic-pro.jpg
-  # address: >
-  #   <p>Google Gradient Canopy</p>
-  #   <p>2000 N Shoreline Blvd</p>
-  #   <p>Mountain View, CA 94043</p>
+  address: >
+    <p> </p>
 
 news: true  # includes a list of news items
 # selected_papers: true # includes a list of papers marked as "selected={true}"
