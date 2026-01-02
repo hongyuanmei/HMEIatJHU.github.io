@@ -20,11 +20,14 @@ social: false  # includes social icons at the bottom of the page
 <!-- I am currently a Research Assistant Professor at Toyota Technological Institute at Chicago (TTIC).  -->
 I train computers to *reason* about the world.
 
-Currently, I am training Grok to be a *knowledgeable reasoner*.
-As a core contributor to Grok, I developed the methods that enabled Grok 4 Heavy, which achieved state-of-the-art performance on Humanity's Last Exam.
+Currently, I am a Member of Technical Staff in the Reasoning Team of xAI, leading the AI Experts Team.
+My team and I have made core contributions to Grok reasoning models, including Grok 4, Grok 4 Heavy, and Grok 4.1 Fast.
+We have improved Grok's capabilities to
+- reason with expert knowledge, achieving state-of-the-art performance on Humanity's Last Exam.
+- handle files (e.g., PDF, Excel) in grok.com and Grok for Business.
+- call tools and follow instructions, reaching top of τ² Bench.
 
 Before joining xAI, I was a Senior Research Scientist at Google DeepMind.
-
 Before DeepMind, I was a Research Assistant Professor at Toyota Technological Institute at Chicago (TTIC), a research institute affiliated with University of Chicago.
 At TTIC, I led the [River Lab]({{ '/lab/' | relative_url }}), conducting research on AI reasoning and planning.
 

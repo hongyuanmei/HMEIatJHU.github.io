@@ -6,8 +6,12 @@ description: A bio for use in announcements, introductions, etc.
 nav: true
 ---
 
-Hongyuan Mei is currently a Member of Technical Staff at xAI. 
-As a core contributor to Grok, he developed the methods that enabled Grok 4 Heavy, which achieved state-of-the-art on Humanity's Last Exam.
+Hongyuan Mei is currently a Member of Technical Staff at xAI, leading the AI Experts Team.
+His team and himself have made core contributions to Grok reasoning models, including Grok 4, Grok 4 Heavy, and Grok 4.1 Fast.
+They have improved Grok's capabilities to
+- reason with expert knowledge, achieving state-of-the-art performance on Humanity's Last Exam.
+- handle files (e.g., PDF, Excel) in grok.com and Grok for Business.
+- call tools and follow instructions, reaching top of τ² Bench.
 
 Before joining xAI, I was a Senior Research Scientist at Google DeepMind.
 Before DeepMind, he was a Research Assistant Professor at Toyota Technological Institute at Chicago (TTIC), a research institute affiliated with University of Chicago.
