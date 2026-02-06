@@ -3,7 +3,9 @@ layout: about
 title: about
 permalink: /
 description: 
-  Member of Technical Staff at xAI
+  I am building AGI.
+  # I train computers to *reason* about the world.
+  # Member of Technical Staff at xAI
   # Senior Research Scientist at Google DeepMind
 profile:
   align: right
@@ -18,14 +20,16 @@ social: false  # includes social icons at the bottom of the page
 
 <!-- I am a computer scientist.  -->
 <!-- I am currently a Research Assistant Professor at Toyota Technological Institute at Chicago (TTIC).  -->
-I train computers to *reason* about the world.
 
-Currently, I am a Member of Technical Staff in the Reasoning Team of xAI, leading the AI Experts Team.
-My team and I have made core contributions to Grok reasoning models, including Grok 4, Grok 4 Heavy, and Grok 4.1 Fast.
-We have improved Grok's capabilities to
+Currently, I am working on an interesting project with a few friends.
+
+Previously, I was a Member of Technical Staff at xAI, leading the AI Experts team.
+My team and I have made core contributions to Grok reasoning models, including Grok 4, Grok 4 Heavy, and Grok 4.1 Fast. My team shipped Grok in Tesla, and drove deep collaboration across xAI, Tesla, SpaceX, and beyond.
+
+<!-- We have improved Grok's capabilities to
 - reason with expert knowledge, achieving state-of-the-art performance on Humanity's Last Exam.
 - handle files (e.g., PDF, Excel) in grok.com and Grok for Business.
-- call tools and follow instructions, reaching top of τ² Bench.
+- call tools and follow instructions, reaching top of τ² Bench. -->
 
 Before joining xAI, I was a Senior Research Scientist at Google DeepMind.
 Before DeepMind, I was a Research Assistant Professor at Toyota Technological Institute at Chicago (TTIC), a research institute affiliated with University of Chicago.
