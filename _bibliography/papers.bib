@@ -4,7 +4,91 @@
 @string{aps = {American Physical Society,}}
 
 
-@inproceedings{heddaya2025casesumm, 
+@inproceedings{xie2026memo,
+  abbr = {ICML},
+  bibtex_show = {true},
+  title = {MEMO: Memory-Augmented Model Context Optimization for Robust Multi-Turn Multi-Agent LLM Games},
+  author = {Xie, Yunfei and Wang, Kevin and Cheng, Bobby and Yao, Jianzhu and Sha, Zhizhou and Duffy, Alexander and Xi, Yihan and Mei, Hongyuan and Tan, Cheston and Wei, Chen and Viswanath, Pramod and Wang, Zhangyang},
+  booktitle = {ICML},
+  year = {2026},
+  arxiv = {2603.09022},
+  abstract = {
+    Multi-turn, multi-agent LLM game evaluations often exhibit substantial run-to-run variance. In long-horizon interactions, small early deviations compound across turns and are amplified by multi-agent coupling. This biases win rate estimates and makes rankings unreliable across repeated tournaments. Prompt choice worsens this further by producing different effective policies. We address both instability and underperformance with MEMO (Memory-augmented MOdel context optimization), a self-play framework that optimizes inference-time context by coupling retention and exploration. Retention maintains a persistent memory bank that stores structured insights from self-play trajectories and injects them as priors during later play. Exploration runs tournament-style prompt evolution with uncertainty-aware selection via TrueSkill, and uses prioritized replay to revisit rare and decisive states. Across five text-based games, MEMO raises mean win rate from 25.1% to 49.5% for GPT-4o-mini and from 20.9% to 44.3% for Qwen-2.5-7B-Instruct, using 2,000 self-play games per task. Run-to-run variance also drops, giving more stable rankings across prompt variations. These results suggest that multi-agent LLM game performance and robustness have substantial room for improvement through context optimization. MEMO achieves the largest gains in negotiation and imperfect-information games, while RL remains more effective in perfect-information settings. 
+  }
+}
+
+
+@inproceedings{wang2026reasoner,
+  abbr = {ICLR},
+  bibtex_show = {true},
+  title = {∇-Reasoner: LLM Reasoning via Test-Time Gradient Descent in Latent Space},
+  author = {Wang, Peihao and Cai, Ruisi and Wang, Zhen and Mei, Hongyuan and Liu, Qiang and Li, Pan and Wang, Zhangyang},
+  booktitle = {ICLR},
+  year = {2026},
+  arxiv = {2603.04948},
+  abstract = {
+    Scaling inference-time compute for Large Language Models (LLMs) has unlocked unprecedented reasoning capabilities. However, existing inference-time scaling methods typically rely on inefficient and suboptimal discrete search algorithms or trial-and-error prompting to improve the online policy. In this paper, we propose ∇-Reasoner, an iterative generation framework that integrates differentiable optimization over token logits into the decoding loop to refine the policy on the fly. Our core component, Differentiable Textual Optimization (DTO), leverages gradient signals from both the LLM's likelihood and a reward model to refine textual representations. ∇-Reasoner further incorporates rejection sampling and acceleration design to robustify and speed up decoding. Theoretically, we show that performing inference-time gradient descent in the sample space to maximize reward is dual to aligning an LLM policy via KL-regularized reinforcement learning. Empirically, ∇-Reasoner achieves over 20% accuracy improvement on a challenging mathematical reasoning benchmark, while reducing number of model calls by approximately 10-40% compared to strong baselines. Overall, our work introduces a paradigm shift from zeroth-order search to first-order optimization at test time, offering a cost-effective path to amplify LLM reasoning.
+  }
+}
+
+
+@inproceedings{zhu2026flowrl,
+  abbr = {ICLR},
+  bibtex_show = {true},
+  title = {FlowRL: Matching Reward Distributions for LLM Reasoning},
+  author = {Zhu, Xuekai and Cheng, Daixuan and Zhang, Dinghuai and Li, Hengli and Zhang, Kaiyan and Jiang, Che and Sun, Youbang and Hua, Ermo and Zuo, Yuxin and Lv, Xingtai and Zhang, Qizheng and Chen, Lin and Shao, Fanghao and Xue, Bo and Song, Yunchong and Yang, Zhenjie and Cui, Ganqu and Ding, Ning and Gao, Jianfeng and Liu, Xiaodong and Zhou, Bowen and Mei, Hongyuan and Lin, Zhouhan},
+  booktitle = {ICLR},
+  year = {2026},
+  arxiv = {2509.15207},
+  abstract = {
+    We propose FlowRL: matching the full reward distribution via flow balancing instead of maximizing rewards in large language model (LLM) reinforcement learning (RL). Recent advanced reasoning models adopt reward-maximizing methods (\eg, PPO and GRPO), which tend to over-optimize dominant reward signals while neglecting less frequent but valid reasoning paths, thus reducing diversity. In contrast, we transform scalar rewards into a normalized target distribution using a learnable partition function, and then minimize the reverse KL divergence between the policy and the target distribution. We implement this idea as a flow-balanced optimization method that promotes diverse exploration and generalizable reasoning trajectories. We conduct experiments on math and code reasoning tasks: FlowRL achieves a significant average improvement of 10.0% over GRPO and 5.1% over PPO on math benchmarks, and performs consistently better on code reasoning tasks. These results highlight reward distribution-matching as a key step toward efficient exploration and diverse reasoning in LLM reinforcement learning.
+  }
+}
+
+
+@inproceedings{lu2026rlvr,
+  abbr = {ICLR},
+  bibtex_show = {true},
+  title = {Generalization of RLVR Using Causal Reasoning as a Testbed},
+  author = {Lu, Brian and Zhao, Hongyu and Sun, Shuo and Peng, Hao and Ding, Rui and Mei, Hongyuan},
+  booktitle = {ICLR},
+  year = {2026},
+  arxiv = {2512.20760},
+  abstract = {
+    Reinforcement learning with verifiable rewards (RLVR) has emerged as a promising paradigm for post-training large language models (LLMs) on complex reasoning tasks. Yet, the conditions under which RLVR yields robust generalization remain underexplored. This paper provides an empirical study of RLVR generalization in the setting of probabilistic inference over causal graphical models. This setting offers two natural axes along which to examine generalization: (i) the level of the probabilistic query -- associational, interventional, or counterfactual -- and (ii) the structural complexity of the query, measured by the size of its relevant subgraph. We construct a dataset of causal graphs and queries spanning these difficulty axes and fine-tune Qwen-2.5-Instruct models using RLVR or supervised fine-tuning (SFT). We vary both the model scale (3B-32B) and the query level included in training. We find that RLVR yields stronger within-level and across-level generalization than SFT, but only for specific combinations of model size and training query level. Further analysis shows that RLVR's effectiveness depends on the model's initial reasoning competence. With sufficient initial competence, RLVR improves an LLM's marginalization strategy and reduces errors in intermediate probability calculations, producing substantial accuracy gains, particularly on more complex queries. These results show that RLVR can improve specific causal reasoning subskills, with its benefits emerging only when the model has sufficient initial competence. 
+  }
+}
+
+
+@inproceedings{vashishtha2026counterfactuals,
+  abbr = {ICLR},
+  bibtex_show = {true},
+  title = {Executable Counterfactuals: Improving LLMs' Causal Reasoning Through Code},
+  author = {Vashishtha, Aniket and Dai, Qirun and Mei, Hongyuan and Sharma, Amit and Tan, Chenhao and Peng, Hao},
+  booktitle = {ICLR},
+  year = {2026},
+  arxiv = {2510.01539},
+  abstract = {
+    Counterfactual reasoning, a hallmark of intelligence, consists of three steps: inferring latent variables from observations (abduction), constructing alternatives (interventions), and predicting their outcomes (prediction). This skill is essential for advancing LLMs' causal understanding and expanding their applications in high-stakes domains such as scientific research. However, existing efforts in assessing LLM's counterfactual reasoning capabilities tend to skip the abduction step, effectively reducing to interventional reasoning and leading to overestimation of LLM performance. To address this, we introduce executable counterfactuals, a novel framework that operationalizes causal reasoning through code and math problems. Our framework explicitly requires all three steps of counterfactual reasoning and enables scalable synthetic data creation with varying difficulty, creating a frontier for evaluating and improving LLM's reasoning. Our results reveal substantial drop in accuracy (25-40%) from interventional to counterfactual reasoning for SOTA models like o4-mini and Claude-4-Sonnet. To address this gap, we construct a training set comprising counterfactual code problems having if-else condition and test on out-of-domain code structures (e.g. having while-loop); we also test whether a model trained on code would generalize to counterfactual math word problems. While supervised finetuning on stronger models' reasoning traces improves in-domain performance of Qwen models, it leads to a decrease in accuracy on OOD tasks such as counterfactual math problems. In contrast, reinforcement learning induces the core cognitive behaviors and generalizes to new domains, yielding gains over the base model on both code (improvement of 1.5x-2x) and math problems. Analysis of the reasoning traces reinforces these findings and highlights the promise of RL for improving LLMs' counterfactual reasoning.
+  }
+}
+
+
+@inproceedings{han2025brainteasers,
+  abbr = {NeurIPS},
+  bibtex_show = {true},
+  title = {Creativity or Brute Force? Using Brainteasers as a Window into the Problem-Solving Abilities of Large Language Models},
+  author = {Han, Sophia and Dai, Howard and Xia, Stephen and Zhang, Grant and Liu, Chen and Chen, Lichang and Nguyen, Hoang H and Mei, Hongyuan and Mao, Jiayuan and McCoy, R. Thomas},
+  booktitle = {NeurIPS},
+  year = {2025},
+  arxiv = {2505.10844},
+  abstract = {
+    Accuracy remains a standard metric for evaluating AI systems, but it offers limited insight into how models arrive at their solutions. In this work, we introduce a benchmark based on brainteasers written in long narrative form to probe more deeply into the types of reasoning strategies that models use. Brainteasers are well-suited for this goal because they can be solved with multiple approaches, such as a few-step solution that uses a creative insight or a longer solution that uses more brute force. We investigate large language models (LLMs) across multiple layers of reasoning, focusing not only on correctness but also on the quality and creativity of their solutions. We investigate many aspects of the reasoning process: (1) semantic parsing of the brainteasers into precise mathematical competition style formats; (2) generating solutions from these mathematical forms; (3) self-correcting solutions based on gold solutions; (4) producing step-by-step sketches of solutions; and (5) making use of hints. We find that LLMs are in many cases able to find creative, insightful solutions to brainteasers, suggesting that they capture some of the capacities needed to solve novel problems in creative ways. Nonetheless, there also remain situations where they rely on brute force despite the availability of more efficient, creative solutions, highlighting a potential direction for improvement in the reasoning abilities of LLMs.
+  }
+}
+
+
+@inproceedings{heddaya2025casesumm,
   abbr = {NAACL},
   bibtex_show = {true},
   title = {CaseSumm: A Large-Scale Dataset for Long-Context Summarization from US Supreme Court Opinions},
