@@ -3,7 +3,8 @@ layout: about
 title: about
 permalink: /
 description: 
-  I am building AGI.
+  I build AI that can reason and act.
+  # I am building AGI.
   # I train computers to *reason* about the world.
   # Member of Technical Staff at xAI
   # Senior Research Scientist at Google DeepMind
