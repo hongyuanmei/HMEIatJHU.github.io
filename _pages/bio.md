@@ -8,7 +8,7 @@ nav: true
 
 Hongyuan Mei is a computer scientist working on building AGI.
 
-He is currently a Research Scientist at Meta Superintelligence Labs (TBD Lab), working with [Yuanzhi Li](https://scholar.google.com/citations?hl=en&user=aHtfItQAAAAJ&view_op=list_works&sortby=pubdate) on mid-training, synthetic data, and AI for Science.
+He is an AI Research Scientist at Meta Superintelligence Labs (TBD Lab), working on mid-training, synthetic data, and AI for Science.
 
 Previously, he was a Member of Technical Staff and Tech Lead at xAI, leading the AI Experts team.
 He and his team made core contributions to Grok reasoning models, including Grok 4, Grok 4 Heavy, and Grok 4.1 Fast.
