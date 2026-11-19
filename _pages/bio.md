@@ -6,18 +6,20 @@ description: A bio for use in announcements, introductions, etc.
 nav: true
 ---
 
-Hongyuan Mei is a computer scientist, building AGI.
+Hongyuan Mei is a computer scientist working on building AGI.
 
-He was a Member of Technical Staff at xAI, leading the AI Experts team.
-His team and himself have made core contributions to Grok reasoning models, including Grok 4, Grok 4 Heavy, and Grok 4.1 Fast.
-His team shipped Grok in Tesla, and drove deep collaboration across xAI, Tesla, SpaceX, and beyond.
+He is currently a Research Scientist at Meta Superintelligence Labs (TBD Lab), working with [Yuanzhi Li](https://scholar.google.com/citations?hl=en&user=aHtfItQAAAAJ&view_op=list_works&sortby=pubdate) on mid-training, synthetic data, and AI for Science.
+
+Previously, he was a Member of Technical Staff and Tech Lead at xAI, leading the AI Experts team.
+He and his team made core contributions to Grok reasoning models, including Grok 4, Grok 4 Heavy, and Grok 4.1 Fast.
+They also shipped Grok in Tesla, and drove deep collaboration across xAI, Tesla, SpaceX, and beyond.
 
 <!-- They have improved Grok's capabilities to
 - reason with expert knowledge, achieving state-of-the-art performance on Humanity's Last Exam.
 - handle files (e.g., PDF, Excel) in grok.com and Grok for Business.
 - call tools and follow instructions, reaching top of τ² Bench. -->
 
-Before joining xAI, I was a Senior Research Scientist at Google DeepMind.
+Before joining xAI, Hongyuan was a Senior Research Scientist at Google DeepMind.
 Before DeepMind, he was a Research Assistant Professor at Toyota Technological Institute at Chicago (TTIC), a research institute affiliated with University of Chicago.
 At TTIC, he led the [River Lab]({{ '/students/' | relative_url }}), conducting research on AI reasoning and planning.
 Hongyuan Mei received PhD in Computer Science from Johns Hopkins University, advised by [Jason Eisner](https://www.cs.jhu.edu/~jason/). Hongyuan and Jason developed the neural Hawkes process, a model widely used in event sequence modeling and prediction.
@@ -47,5 +49,5 @@ His research has been covered by [Fortune Magazine](https://fortune.com/2020/09/
 Before joining JHU, Hongyuan obtained two MS degrees 
 <!---(in Physical Science and Financial Mathematics)-->
 from University of Chicago, 
-and did research in natural language processing with Mohit Bansal and Matthew R. Walter at TTIC. 
+and did research in natural language processing with [Mohit Bansal](https://www.cs.unc.edu/~mbansal/) and [Matthew R. Walter](https://home.ttic.edu/~mwalter/) at TTIC. 
 Prior to that, he obtained a BE in Electrical Engineering and a BA in Finance from Huazhong University of Science and Technology.
